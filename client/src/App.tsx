@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-
-import MonthsCircle from "./components/Circle/MonthsCircle";
-import DaysCircle from "./components/Circle/DaysCircle";
+import { DaysCircle, MonthsCircle } from "./components";
 import getMonths from "./hooks/getMonths";
 import "./App.css";
 
@@ -16,14 +14,14 @@ function App() {
 
   return (
     <>
-      <div id="container">
+      <main id="container">
         <MonthsCircle
           months={months}
           setNumberOfMonth={setNumberOfMonth}
           numberOfMonth={numberOfMonth}
         />
         <DaysCircle months={months} numberOfMonth={numberOfMonth} />
-      </div>
+      </main>
     </>
   );
 }
