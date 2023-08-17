@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import getMonths from "./getMonths";
-import Test from "./Test";
 
 const Clock = ({ months, setNumberOfMonth, numberOfMonth }) => {
   return (
