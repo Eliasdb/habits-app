@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
-
-const Clock = ({ months, setNumberOfMonth, numberOfMonth }) => {
+const MonthsCircle = ({ months, setNumberOfMonth }) => {
   return (
     <>
-      <ul className="circles">
+      <ul className="circle-month">
         {months.map((month, index) => {
           return (
             <li
@@ -20,4 +18,4 @@ const Clock = ({ months, setNumberOfMonth, numberOfMonth }) => {
     </>
   );
 };
-export default Clock;
+export default MonthsCircle;

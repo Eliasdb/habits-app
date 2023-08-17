@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import getDaysInMonth from "../hooks/getDays";
+import { useEffect, useState } from "react";
+import getDaysInMonth from "../../hooks/getDays";
 
-const DaysClock = ({ numberOfMonth }) => {
+const DaysCircle = ({ numberOfMonth }) => {
   const [days, setDays] = useState([]);
 
   useEffect(() => {
@@ -10,10 +10,11 @@ const DaysClock = ({ numberOfMonth }) => {
   }, [numberOfMonth]);
 
   return (
-    <div id="main">
+    <div id="circle-days">
       {days.map((day, i) => {
         return (
           <div
+            key={i}
             className="circle"
             style={{
               top: `${
@@ -45,4 +46,4 @@ const DaysClock = ({ numberOfMonth }) => {
     </div>
   );
 };
-export default DaysClock;
+export default DaysCircle;

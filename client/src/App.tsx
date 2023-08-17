@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
-import MonthClock from "../Clock/MonthClock";
-import DaysClock from "../Clock/DaysClock";
+import { useEffect, useState } from "react";
 
-import getMonths from "../hooks/getMonths";
+import MonthsCircle from "./components/Circle/MonthsCircle";
+import DaysCircle from "./components/Circle/DaysCircle";
+import getMonths from "./hooks/getMonths";
+import "./App.css";
 
-export const App = () => {
+function App() {
   const [numberOfMonth, setNumberOfMonth] = useState(0);
   const [months, setMonths] = useState([]);
 
@@ -16,13 +17,15 @@ export const App = () => {
   return (
     <>
       <div id="container">
-        <MonthClock
+        <MonthsCircle
           months={months}
           setNumberOfMonth={setNumberOfMonth}
           numberOfMonth={numberOfMonth}
         />
-        <DaysClock months={months} numberOfMonth={numberOfMonth} />
+        <DaysCircle months={months} numberOfMonth={numberOfMonth} />
       </div>
     </>
   );
-};
+}
+
+export default App;
