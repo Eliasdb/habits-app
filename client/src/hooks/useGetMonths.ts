@@ -1,5 +1,5 @@
-const getMonths = (startDate, endDate) => {
-  let resultList = [];
+const useGetMonths = (startDate, endDate) => {
+  let months = [];
   let date = new Date(startDate);
   let endingDate = new Date(endDate);
   const monthNameList = [
@@ -24,7 +24,7 @@ const getMonths = (startDate, endDate) => {
     let firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
     let lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
 
-    resultList.push([
+    months.push([
       {
         str: stringDate,
         first: firstDay,
@@ -34,7 +34,7 @@ const getMonths = (startDate, endDate) => {
     date.setMonth(date.getMonth() + 1);
   }
 
-  return resultList;
+  return months;
 };
 
-export default getMonths;
+export default useGetMonths;

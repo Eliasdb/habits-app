@@ -1,6 +1,6 @@
 const MonthsCircle = ({ months, setNumberOfMonth }) => {
   return (
-    <>
+    <div className="circle-month-container">
       <ul className="circle-month">
         {months.map((month, index) => {
           return (
@@ -15,7 +15,7 @@ const MonthsCircle = ({ months, setNumberOfMonth }) => {
           );
         })}
       </ul>
-    </>
+    </div>
   );
 };
 export default MonthsCircle;

@@ -19,7 +19,7 @@ body {
   display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 .circle-month {
@@ -128,8 +128,30 @@ li:nth-child(12) {
   /* left: 50%;
   top: 29.4%; */
 
-  left: 72%;
-  top: 29.4%;
+  /* left: 72%;
+  top: 29.4%; */
+  /* margin-top: 18rem; */
+  margin-top: 57rem;
+
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  /* box-shadow: black 0px 0px 35px 8.75px inset; */
+  border: 1px solid black;
+  background: white;
+  width: 535px;
+  height: 535px;
+  /* display: none; */
+}
+
+#circle-hours {
+  position: absolute;
+  /* left: 50%;
+  top: 29.4%; */
+
+  /* left: 72%;
+  top: 29.4%; */
+  /* margin-top: 18rem; */
+  margin-top: 97rem;
 
   transform: translate(-50%, -50%);
   border-radius: 50%;
@@ -162,4 +184,17 @@ li:nth-child(12) {
 
 .test {
   margin-bottom: 1rem;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+}
+
+.circle-days-container,
+.circle-hours-container,
+.circle-month-container {
+  display: flex;
+  justify-content: center;
+  max-width: 35rem;
 }

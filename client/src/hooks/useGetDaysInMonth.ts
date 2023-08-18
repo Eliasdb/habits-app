@@ -1,4 +1,4 @@
-const getDaysInMonth = (month, year) => {
+const useGetDaysInMonth = (month, year) => {
   let date = new Date(year, month, 1);
   let days = [];
   while (date.getMonth() === month) {
@@ -9,4 +9,4 @@ const getDaysInMonth = (month, year) => {
   return days;
 };
 
-export default getDaysInMonth;
+export default useGetDaysInMonth;
