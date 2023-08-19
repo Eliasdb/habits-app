@@ -1,4 +1,11 @@
-const DaysCircle = ({ days, setNumberOfDay }) => {
+import Image from "../../assets/middle-img.webp";
+
+interface DaysCircleProps {
+  days: [Date];
+  setNumberOfDay: number;
+}
+
+const DaysCircle = ({ days, setNumberOfDay }: DaysCircleProps) => {
   return (
     <div className="circle-days-container">
       <div id="circle-days">
@@ -35,6 +42,7 @@ const DaysCircle = ({ days, setNumberOfDay }) => {
             </div>
           );
         })}
+        <img className="center-image" src={Image} alt="image" />
       </div>
     </div>
   );

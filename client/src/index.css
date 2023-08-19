@@ -140,6 +140,9 @@ li:nth-child(12) {
   background: white;
   width: 535px;
   height: 535px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* display: none; */
 }
 
@@ -197,4 +200,20 @@ li:nth-child(12) {
   display: flex;
   justify-content: center;
   max-width: 35rem;
+}
+
+.center-image {
+  width: 17rem;
+  height: 17rem;
+  border-radius: 50%;
+}
+
+#circle-hours .circle {
+  background: indianred;
+}
+
+#circle-hours .circle:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.8);
 }

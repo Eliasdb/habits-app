@@ -1,4 +1,8 @@
-const HoursCircle = ({ hours }) => {
+interface HoursCircleProps {
+  hours: [Date];
+}
+
+const HoursCircle = ({ hours }: HoursCircleProps) => {
   return (
     <div className="circle-hours-container">
       <div id="circle-hours">

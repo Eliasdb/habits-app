@@ -1,4 +1,4 @@
-const useGetMonths = (startDate, endDate) => {
+const useGetMonths = (startDate: string, endDate: string): {}[] => {
   let months = [];
   let date = new Date(startDate);
   let endingDate = new Date(endDate);
