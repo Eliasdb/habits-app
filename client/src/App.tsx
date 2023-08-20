@@ -11,7 +11,6 @@ import useGetDaysInMonth from "./hooks/useGetDaysInMonth";
 import useGetHoursInDay from "./hooks/useGetHoursInDay";
 
 import "./App.css";
-import Cardinals from "./components/Circle/Cardinals";
 
 function App() {
   const [numberOfMonth, setNumberOfMonth] = useState<number>(0);
@@ -20,6 +19,8 @@ function App() {
   const [months, setMonths] = useState([]);
   const [days, setDays] = useState([]);
   const [hours, setHours] = useState([]);
+
+  const [toggleMonth, setToggleMonth] = useState(false);
 
   useEffect(() => {
     let months = useGetMonths("1-1-2023", "12-1-2023");
@@ -42,12 +43,16 @@ function App() {
         <MonthsCircle
           months={months}
           setMonths={setMonths}
+          toggleMonth={toggleMonth}
           setNumberOfMonth={setNumberOfMonth}
+          setToggleMonth={setToggleMonth}
         />
         <DaysCircle
           days={days}
           numberOfMonth={numberOfMonth}
           setNumberOfDay={setNumberOfDay}
+          toggleMonth={toggleMonth}
+          setToggleMonth={setToggleMonth}
         />
         <HourCircle hours={hours} />
         <AstroCircle hours={hours} />

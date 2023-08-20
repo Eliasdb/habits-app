@@ -5,9 +5,14 @@ interface MonthsCircleProps {
   setNumberOfMonth: (index: number) => number;
 }
 
-const MonthsCircle = ({ months, setNumberOfMonth }: MonthsCircleProps) => {
+const MonthsCircle = ({
+  months,
+  setNumberOfMonth,
+  toggleMonth,
+  setToggleMonth,
+}: MonthsCircleProps) => {
   return (
-    <div className="circle-month-container">
+    <div className={`circle-month-container ${toggleMonth ? "hide" : ""}`}>
       <Cardinals />
       <ul className="circle-month">
         {months.map((month, index) => {
@@ -16,11 +21,12 @@ const MonthsCircle = ({ months, setNumberOfMonth }: MonthsCircleProps) => {
               key={index}
               onClick={() => {
                 setNumberOfMonth(index);
+                setToggleMonth(true);
                 console.log(month);
               }}
             >
-              {/* <div className="text">{month[0].str.slice(0, 3)}</div> */}
-              <div className="text">{index + 1}</div>
+              <div className="text">{month[0].str.slice(0, 3)}</div>
+              {/* <div className="text">{index + 1}</div> */}
             </li>
           );
         })}

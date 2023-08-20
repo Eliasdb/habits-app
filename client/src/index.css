@@ -36,12 +36,8 @@ body {
   border-radius: 50%;
   list-style: none;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.8);
-  background-image: linear-gradient(
-    104deg,
-    rgb(0 0 0) 39.2%,
-    rgb(88 88 88) 100%
-  );
+  background: rgba(0, 0, 0, 1);
+  transform: rotate(209deg);
 }
 li {
   overflow: hidden;
@@ -140,20 +136,19 @@ li:nth-child(12) {
 
   /* left: 72%;
   top: 29.4%; */
-  /* margin-top: 18rem; */
-  margin-top: 57rem;
+  /* margin-top: 40rem; */
+  /* margin-top: 57rem; */
 
   transform: translate(-50%, -50%);
   border-radius: 50%;
   /* box-shadow: black 0px 0px 35px 8.75px inset; */
   border: 1px solid black;
-  background-color: rgba(255, 255, 255, 0.75);
   width: 535px;
   height: 535px;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* display: none; */
+  background-color: #242424;
 }
 
 #circle-hours {
@@ -195,8 +190,6 @@ li:nth-child(12) {
   top: 50%;
   left: 50%;
   overflow: hidden;
-  /* z-index: -1; */
-  /* display: none; */
 }
 
 .astro-circle {
@@ -216,8 +209,6 @@ li:nth-child(12) {
 
 .circle {
   position: absolute;
-  background: blueviolet;
-  color: papayawhip;
   text-align: center;
   font-family: "Open Sans Condensed", sans-serif;
   border-radius: 50%;
@@ -225,6 +216,8 @@ li:nth-child(12) {
   width: 35px;
   height: 35px;
   line-height: 35px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .circle:hover {
@@ -257,6 +250,7 @@ li:nth-child(12) {
   width: 13rem;
   height: 13rem;
   /* border-radius: 50%; */
+  color: white;
 }
 
 #circle-hours .circle {
@@ -272,7 +266,7 @@ li:nth-child(12) {
 .cardinals {
   color: darkgrey;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .cardinal-E:hover,
@@ -284,26 +278,51 @@ li:nth-child(12) {
 
 .cardinal-N {
   position: absolute;
-  top: -1.7rem;
-  left: 16.4rem;
+  top: -1.3rem;
+  left: 16.2rem;
+  background: #242424;
+  padding: 0.1rem 0;
+
+  border: 1px solid white;
+  width: 1rem;
+  height: 1rem;
+  line-height: 1rem;
 }
 
 .cardinal-E {
   position: absolute;
-  left: 35.1rem;
+  left: 34.8rem;
   top: 17rem;
+  background: #242424;
+  padding: 0.1rem 0;
+  border: 1px solid white;
+  width: 1rem;
+  height: 1rem;
+  line-height: 1rem;
 }
 
 .cardinal-S {
   position: absolute;
   top: 35.7rem;
-  left: 16.4rem;
+  left: 16.2rem;
+  background: #242424;
+  padding: 0.1rem 0;
+  border: 1px solid white;
+  width: 1rem;
+  height: 1rem;
+  line-height: 1rem;
 }
 
 .cardinal-W {
   position: absolute;
-  top: 16.8rem;
-  left: -2.4rem;
+  top: 17.1rem;
+  left: -2.3rem;
+  background: #242424;
+  padding: 0.1rem 0;
+  border: 1px solid white;
+  width: 1rem;
+  height: 1rem;
+  line-height: 1rem;
 }
 
 .real-container {
@@ -347,12 +366,16 @@ li:nth-child(12) {
   position: relative;
 }
 
+.circle-days-container {
+  display: none;
+  z-index: 6;
+}
+
 .divider-1 {
   position: absolute;
   height: 6.5rem;
   top: 2.25rem;
   left: 28.82rem;
-  z-index: 50;
   transform: rotate(30deg);
   border-left: 1px solid white;
 }
@@ -362,7 +385,6 @@ li:nth-child(12) {
   height: 9.5rem;
   top: 7.25rem;
   left: 34.67rem;
-  z-index: 50;
   transform: rotate(60deg);
   border-left: 1px solid white;
 }
@@ -372,7 +394,6 @@ li:nth-child(12) {
   height: 42.74rem;
   top: 7.25rem;
   left: 34.68rem;
-  z-index: 50;
   transform: rotate(120deg);
   border-left: 1px solid white;
 }
@@ -382,7 +403,6 @@ li:nth-child(12) {
   height: 75.74rem;
   top: 7.25rem;
   left: 34.63rem;
-  z-index: 50;
   transform: rotate(150deg);
   border-left: 1px solid white;
 }
@@ -392,7 +412,6 @@ li:nth-child(12) {
   height: 47.15rem;
   top: 18.75rem;
   left: 7.59rem;
-  z-index: 50;
   transform: rotate(210deg);
   border-left: 1px solid white;
 }
@@ -402,7 +421,6 @@ li:nth-child(12) {
   height: 47.83rem;
   top: 3.75rem;
   left: 7.59rem;
-  z-index: 50;
   transform: rotate(240deg);
   border-left: 1px solid white;
 }
@@ -412,7 +430,6 @@ li:nth-child(12) {
   height: 47.83rem;
   top: -11.25rem;
   left: 7rem;
-  z-index: 50;
   transform: rotate(300deg);
   border-left: 1px solid white;
 }
@@ -422,7 +439,122 @@ li:nth-child(12) {
   height: 18.83rem;
   top: -11.25rem;
   left: 7.46rem;
-  z-index: 50;
   transform: rotate(330deg);
   border-left: 1px solid white;
+}
+
+.divider-n {
+  position: absolute;
+  height: 6.5rem;
+
+  left: 20.255rem;
+  transform: rotate(0deg);
+  border-left: 1px solid white;
+}
+
+.divider-e {
+  position: absolute;
+  height: 9.9rem;
+  top: 15.35rem;
+  left: 39.67rem;
+  transform: rotate(90deg);
+  border-left: 1px solid white;
+}
+
+.divider-s {
+  position: absolute;
+  height: 75.74rem;
+  top: 7.25rem;
+  left: 20.296rem;
+  transform: rotate(180deg);
+  border-left: 1px solid white;
+}
+
+.divider-w {
+  position: absolute;
+  height: 47.83rem;
+  top: -3.58rem;
+  left: 6.59rem;
+  transform: rotate(270deg);
+  border-left: 1px solid white;
+}
+
+.astro-item-4 {
+  transform: rotate(15deg);
+}
+
+.astro-item-5 {
+  transform: rotate(45deg);
+}
+
+.astro-item-6 {
+  transform: rotate(75deg);
+}
+
+.astro-item-7 {
+  transform: rotate(105deg);
+}
+
+.astro-item-8 {
+  transform: rotate(135deg);
+}
+
+.astro-item-9 {
+  transform: rotate(165deg);
+}
+
+.astro-item-10 {
+  transform: rotate(195deg);
+}
+
+.astro-item-11 {
+  transform: rotate(225deg);
+}
+
+.astro-item-12 {
+  transform: rotate(255deg);
+}
+
+.astro-item-1 {
+  transform: rotate(285deg);
+}
+
+.astro-item-2 {
+  transform: rotate(315deg);
+}
+
+.astro-item-3 {
+  transform: rotate(345deg);
+}
+
+.fade-in-out {
+  opacity: 0;
+  animation: fade-in 1s ease-in forwards;
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* .circle-month:hover {
+  animation: fade-out 4s 1s ease-out forwards;
+} */
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }

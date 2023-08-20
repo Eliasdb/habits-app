@@ -12,11 +12,19 @@ interface DaysCircleProps {
   setNumberOfDay: number;
 }
 
-const DaysCircle = ({ days, setNumberOfDay }: DaysCircleProps) => {
+const DaysCircle = ({
+  days,
+  setNumberOfDay,
+  toggleMonth,
+  setToggleMonth,
+}: DaysCircleProps) => {
   const [weekday, setWeekDay] = useState<string>(`${Monday}`);
 
   return (
-    <div className="circle-days-container">
+    <div
+      className={`circle-days-container ${toggleMonth ? "show" : ""}`}
+      onMouseLeave={() => setToggleMonth(false)}
+    >
       <div id="circle-days">
         {days.map((day, i) => {
           return (
