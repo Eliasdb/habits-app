@@ -1,3 +1,5 @@
+import { Cardinals, Dividers } from "../index";
+
 interface MonthsCircleProps {
   months: [{}];
   setNumberOfMonth: (index: number) => number;
@@ -6,6 +8,7 @@ interface MonthsCircleProps {
 const MonthsCircle = ({ months, setNumberOfMonth }: MonthsCircleProps) => {
   return (
     <div className="circle-month-container">
+      <Cardinals />
       <ul className="circle-month">
         {months.map((month, index) => {
           return (
@@ -13,10 +16,11 @@ const MonthsCircle = ({ months, setNumberOfMonth }: MonthsCircleProps) => {
               key={index}
               onClick={() => {
                 setNumberOfMonth(index);
-                console.log(months);
+                console.log(month);
               }}
             >
-              <div className="text">{month[0].str.slice(0, 3)}</div>
+              {/* <div className="text">{month[0].str.slice(0, 3)}</div> */}
+              <div className="text">{index + 1}</div>
             </li>
           );
         })}

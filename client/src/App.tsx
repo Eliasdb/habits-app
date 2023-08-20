@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
-import { DaysCircle, HourCircle, MonthsCircle } from "./components";
+import {
+  AstroCircle,
+  DaysCircle,
+  HourCircle,
+  MonthsCircle,
+} from "./components";
 
 import useGetMonths from "./hooks/useGetMonths";
 import useGetDaysInMonth from "./hooks/useGetDaysInMonth";
@@ -34,14 +39,18 @@ function App() {
   return (
     <div className="real-container">
       <main id="container">
-        <Cardinals />
-        <MonthsCircle months={months} setNumberOfMonth={setNumberOfMonth} />
+        <MonthsCircle
+          months={months}
+          setMonths={setMonths}
+          setNumberOfMonth={setNumberOfMonth}
+        />
         <DaysCircle
           days={days}
           numberOfMonth={numberOfMonth}
           setNumberOfDay={setNumberOfDay}
         />
         <HourCircle hours={hours} />
+        <AstroCircle hours={hours} />
       </main>
     </div>
   );
