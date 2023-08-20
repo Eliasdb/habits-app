@@ -221,45 +221,75 @@ li:nth-child(12) {
 }
 
 .cardinals {
-  color: lightgrey;
+  color: darkgrey;
   font-weight: bold;
-  font-size: larger;
+  font-size: 1.6rem;
 }
 
 .cardinal-E:hover,
 .cardinal-S:hover,
 .cardinal-N:hover,
 .cardinal-W:hover {
-  color: darkgrey;
+  color: lightgrey;
+  
 }
 
 .cardinal-N {
   position: absolute;
-  top: -1.2rem;
-
-  left: 16.3rem;
+  top: -2.5rem;
+  left: 16.2rem;
 }
 
 .cardinal-E {
   position: absolute;
-  left: 34.5rem;
-  top: 16.9rem;
+  left: 35.2rem;
+  top: 16.65rem;
 }
 
 .cardinal-S {
-  position: absolute;
-  top: 35rem;
-  left: 16.4rem;
+position: absolute;
+top: 35.6rem;
+left: 16.25rem;
 }
 
 .cardinal-W {
   position: absolute;
-  top: 16.9rem;
-  left: -2rem;
+  top: 16.6rem;
+  left: -3.5rem;
 }
 
 .real-container {
-    height: 100vh;
-    display: flex;
-    align-items: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.vertical-line-n {
+ border-left: 2px solid lightgrey;
+  position: absolute;
+  height: 0.3rem;
+  left: 16.73rem;
+  top: 0.7rem;
+}
+
+.vertical-line-s {
+ border-left: 2px solid lightgrey;
+  position: absolute;
+  height: 0.3rem;
+  left: 16.73rem;
+  top: 34.6rem;
+}
+
+.horizontal-line-e {
+    position: absolute;
+    width: 0.3rem;
+    top: 16.95rem;
+    left: 33.5rem;
+}
+
+.horizontal-line-w {
+    position: absolute;
+    width: 0.3rem;
+  top: 16.95rem;
+    left: -0.5rem;
 }
