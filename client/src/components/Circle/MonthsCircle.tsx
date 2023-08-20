@@ -1,5 +1,5 @@
 interface MonthsCircleProps {
-  months: {}[];
+  months: [{}];
   setNumberOfMonth: (index: number) => number;
 }
 

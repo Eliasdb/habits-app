@@ -19,7 +19,7 @@ const HoursCircle = ({ hours }: HoursCircleProps) => {
                       250 +
                         -250 *
                           Math.cos(
-                            (360 / hours.length / 180) * (i + 0) * Math.PI
+                            (360 / hours.length / 180) * (i + -11) * Math.PI
                           )
                     ) + "px"
                   }`,
@@ -29,10 +29,10 @@ const HoursCircle = ({ hours }: HoursCircleProps) => {
                         250 *
                           (true
                             ? Math.sin(
-                                (360 / hours.length / 180) * (i + 0) * Math.PI
+                                (360 / hours.length / 180) * (i + -11) * Math.PI
                               )
                             : -Math.sin(
-                                (360 / hours.length / 180) * (i + 0) * Math.PI
+                                (360 / hours.length / 180) * (i + -11) * Math.PI
                               ))
                     ) + "px"
                   }`,

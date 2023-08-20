@@ -6,6 +6,7 @@ import useGetDaysInMonth from "./hooks/useGetDaysInMonth";
 import useGetHoursInDay from "./hooks/useGetHoursInDay";
 
 import "./App.css";
+import Cardinals from "./components/Circle/Cardinals";
 
 function App() {
   const [numberOfMonth, setNumberOfMonth] = useState<number>(0);
@@ -31,8 +32,9 @@ function App() {
   }, [days, numberOfDay]);
 
   return (
-    <>
+    <div className="real-container">
       <main id="container">
+        <Cardinals />
         <MonthsCircle months={months} setNumberOfMonth={setNumberOfMonth} />
         <DaysCircle
           days={days}
@@ -41,7 +43,7 @@ function App() {
         />
         <HourCircle hours={hours} />
       </main>
-    </>
+    </div>
   );
 }
 
