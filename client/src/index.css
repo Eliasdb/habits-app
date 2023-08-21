@@ -143,19 +143,11 @@ li:nth-child(12) {
 
 #circle-days {
   position: absolute;
-  /* left: 50%;
-  top: 29.4%; */
-
-  /* left: 72%;
-  top: 29.4%; */
-  /* margin-top: 40rem; */
-  /* margin-top: 57rem; */
-
   transform: translate(-50%, -50%);
   transform: translate(-16%, -50%);
   border-radius: 50%;
   /* box-shadow: black 0px 0px 35px 8.75px inset; */
-  border: 1px solid black;
+  border: 1px solid white;
   width: 535px;
   height: 535px;
   display: flex;
@@ -166,17 +158,8 @@ li:nth-child(12) {
 
 #circle-hours {
   position: absolute;
-  /* left: 50%;
-  top: 29.4%; */
-
-  /* left: 72%;
-  top: 29.4%; */
-  /* margin-top: 18rem; */
-  /* margin-top: 97rem; */
-
   transform: translate(-50%, -50%);
   transform: translate(-16%, -50%);
-
   border-radius: 50%;
   /* box-shadow: black 0px 0px 35px 8.75px inset; */
   border: 1px solid black;
@@ -191,18 +174,12 @@ li:nth-child(12) {
 
 #circle-astro {
   position: absolute;
-
-  /* margin-top: 18rem; */
-  /* margin-top: 137rem; */
-
   transform: translate(-50%, -50%);
   /* transform: translate(-42.2%, -50%); */
-
   border-radius: 50%;
   /* box-shadow: black 0px 0px 35px 8.75px inset; */
   border: 1px solid white;
   /* background: rgba(0, 0, 0, 0.2); */
-
   width: 650px;
   height: 650px;
   top: 50%;
@@ -239,7 +216,7 @@ li:nth-child(12) {
 .circle {
   position: absolute;
   text-align: center;
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: "Vollkorn", serif;
   border-radius: 50%;
   transition: transform 0.2s ease 0s;
   width: 30px;
@@ -264,6 +241,7 @@ li:nth-child(12) {
   justify-content: center;
   /* position: relative; */
   align-items: center;
+  border-radius: 50%;
 }
 
 .circle-days-container,
@@ -273,6 +251,7 @@ li:nth-child(12) {
   display: flex;
   justify-content: center;
   max-width: 35rem;
+  border-radius: 50%;
 }
 
 .center-image {
@@ -582,14 +561,6 @@ li:nth-child(12) {
   }
 }
 
-/* .circle-month:hover {
-  animation: fade-out 4s 1s ease-out forwards;
-} */
-
-.circle-hours-container,
-.circle-hours-container {
-  /* display: flex; */
-}
 .show {
   z-index: 400;
   display: flex;
