@@ -1,6 +1,6 @@
 const LifeTracker = () => {
   return (
-    <main className="lifetracker-container">
+    <main className="text-3xl lifetracker-container">
       <section className="tracker-title">
         <h3>Your life in ...</h3>
       </section>

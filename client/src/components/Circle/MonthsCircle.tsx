@@ -25,8 +25,8 @@ const MonthsCircle = ({
                 console.log(month);
               }}
             >
-              <div className="text">{month[0].str.slice(0, 3)}</div>
-              {/* <div className="text">{index + 1}</div> */}
+              {/* <div className="text">{month[0].str.slice(0, 3)}</div> */}
+              <div className="text">{index + 1}</div>
             </li>
           );
         })}

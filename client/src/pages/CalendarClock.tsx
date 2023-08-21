@@ -37,8 +37,8 @@ const CalendarClock = () => {
   }, [days, numberOfDay]);
 
   return (
-    <div className="real-container">
-      <main id="container">
+    <main className="calendar-clock">
+      <section id="container">
         <MonthsCircle
           months={months}
           setMonths={setMonths}
@@ -57,8 +57,8 @@ const CalendarClock = () => {
         />
         <HourCircle hours={hours} toggleHours={toggleHours} />
         <AstroCircle hours={hours} setToggleMonth={setToggleMonth} />
-      </main>
-    </div>
+      </section>
+    </main>
   );
 };
 export default CalendarClock;

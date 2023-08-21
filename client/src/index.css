@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -49,6 +55,11 @@ li {
   transform-origin: 0% 100%;
   /* outline: 1px solid white !important; */
   cursor: pointer;
+  color: lightgray;
+}
+
+li:hover {
+  color: white;
 }
 .text {
   position: absolute;
@@ -60,6 +71,7 @@ li {
   -ms-transform: skewY(60deg) rotate(15deg);
   transform: skewY(60deg) rotate(15deg);
   padding-top: 20px;
+  font-family: "Vollkorn", serif;
 }
 
 .text:hover {
@@ -140,6 +152,7 @@ li:nth-child(12) {
   /* margin-top: 57rem; */
 
   transform: translate(-50%, -50%);
+  transform: translate(-16%, -50%);
   border-radius: 50%;
   /* box-shadow: black 0px 0px 35px 8.75px inset; */
   border: 1px solid black;
@@ -162,6 +175,8 @@ li:nth-child(12) {
   /* margin-top: 97rem; */
 
   transform: translate(-50%, -50%);
+  transform: translate(-16%, -50%);
+
   border-radius: 50%;
   /* box-shadow: black 0px 0px 35px 8.75px inset; */
   border: 1px solid black;
@@ -227,9 +242,9 @@ li:nth-child(12) {
   font-family: "Open Sans Condensed", sans-serif;
   border-radius: 50%;
   transition: transform 0.2s ease 0s;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
   color: white;
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -247,7 +262,7 @@ li:nth-child(12) {
 #container {
   display: flex;
   justify-content: center;
-  position: relative;
+  /* position: relative; */
   align-items: center;
 }
 
@@ -282,6 +297,7 @@ li:nth-child(12) {
 
 .cardinals {
   color: darkgrey;
+  font-family: "Vollkorn", serif;
   font-weight: bold;
   font-size: 1rem;
 }
@@ -296,55 +312,51 @@ li:nth-child(12) {
 .cardinal-N {
   position: absolute;
   top: -1.45rem;
-  left: 16.1rem;
-  background: #242424;
+  left: 16.2rem;
+  background: rgba(0, 0, 0, 1);
+
   padding: 0.1rem 0.1rem;
   border: 1px solid white;
-  width: 1rem;
-  height: 1rem;
-  line-height: 1rem;
+  line-height: 1.1rem;
+  width: 1.1rem;
 }
 
 .cardinal-E {
   position: absolute;
   left: 34.73rem;
   top: 17.1rem;
-  background: #242424;
-  padding: 0.1rem 0.1rem;
+  background: rgba(0, 0, 0, 1);
 
+  padding: 0.1rem 0.1rem;
   border: 1px solid white;
-  width: 1rem;
-  height: 1rem;
-  line-height: 1rem;
+  line-height: 1.1rem;
+  width: 1.1rem;
 }
 
 .cardinal-S {
   position: absolute;
-  top: 35.6rem;
-  left: 16.1rem;
-  background: #242424;
-  padding: 0.1rem 0.1rem;
+  top: 35.5rem;
+  left: 16.2rem;
+  background: rgba(0, 0, 0, 1);
 
+  padding: 0.1rem 0.1rem;
   border: 1px solid white;
-  width: 1rem;
-  height: 1rem;
-  line-height: 1rem;
+  line-height: 1.1rem;
+  width: 1.1rem;
 }
 
 .cardinal-W {
   position: absolute;
   top: 17.1rem;
   left: -2.4rem;
-  background: #242424;
-  padding: 0.1rem 0.1rem;
-
+  background: rgba(0, 0, 0, 1);
+  padding: 0.1rem 0;
   border: 1px solid white;
-  width: 1rem;
-  height: 1rem;
-  line-height: 1rem;
+  line-height: 1.3rem;
+  width: 1.3rem;
 }
 
-.real-container {
+.calendar-clock {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -610,4 +622,9 @@ li:nth-child(12) {
   align-items: center;
   flex-direction: column;
   padding: 2rem;
+}
+
+svg {
+  display: inline;
+  vertical-align: 0%;
 }
