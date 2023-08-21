@@ -23,11 +23,11 @@ const DaysCircle = ({
 
   return (
     <section
-      className={`circle-days-container ${toggleMonth ? "show-days" : "hide"} ${
+      className={`days-circle-container ${toggleMonth ? "show-days" : "hide"} ${
         toggleHours && "hide"
       }`}
     >
-      <div id="circle-days">
+      <div className="days-circle">
         {days.map((day, i) => {
           return (
             <div

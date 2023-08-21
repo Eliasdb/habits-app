@@ -5,9 +5,9 @@ interface HoursCircleProps {
 const HoursCircle = ({ hours, toggleHours }: HoursCircleProps) => {
   return (
     <section
-      className={`circle-hours-container ${toggleHours ? "show" : "hide"}`}
+      className={`hours-circle-container ${toggleHours ? "show" : "hide"}`}
     >
-      <div id="circle-hours">
+      <div className="hours-circle">
         {hours &&
           hours.map((hour, i) => {
             return (

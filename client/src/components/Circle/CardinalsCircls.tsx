@@ -9,14 +9,14 @@ const CardinalsCircle = () => {
   ];
   return (
     <>
-      <section id="circle-c">
+      <section className="cardinal-circle">
         {cardinals &&
-          cardinals.map((symbol, i) => {
+          cardinals.map((cardinal, i) => {
             return (
               <div
                 key={i}
-                className={`c-circle-${i + 1}`}
-                onClick={() => console.log(symbol)}
+                className={`cardinal-${i + 1}`}
+                onClick={() => console.log(cardinal)}
                 style={{
                   top: `${
                     String(
@@ -46,7 +46,7 @@ const CardinalsCircle = () => {
                   }`,
                 }}
               >
-                {symbol}
+                {cardinal}
               </div>
             );
           })}

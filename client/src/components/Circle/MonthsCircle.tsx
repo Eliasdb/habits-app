@@ -10,8 +10,8 @@ const MonthsCircle = ({
   setToggleMonth,
 }: MonthsCircleProps) => {
   return (
-    <section className={`circle-month-container ${toggleMonth ? "hide" : ""}`}>
-      <ul className="circle-month">
+    <section className={`months-circle-container ${toggleMonth ? "hide" : ""}`}>
+      <ul className="months-circle">
         {months.map((month, index) => {
           return (
             <li
@@ -23,7 +23,7 @@ const MonthsCircle = ({
               }}
             >
               {/* <div className="text">{month[0].str.slice(0, 3)}</div> */}
-              <div className="text">{index + 1}</div>
+              <div className="month">{index + 1}</div>
             </li>
           );
         })}

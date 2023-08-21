@@ -4,14 +4,14 @@ import { astroSymbols } from "../../data/data";
 const AstroCircle = () => {
   return (
     <>
-      <section id="circle-astro">
+      <section className="astro-circle">
         <Dividers />
         {astroSymbols &&
           astroSymbols.map((symbol, i) => {
             return (
               <div
                 key={i}
-                className="astro-circle"
+                className="astro-circle-item"
                 onClick={() => console.log(symbol)}
                 style={{
                   top: `${

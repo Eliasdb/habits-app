@@ -1,3 +1,5 @@
+/* BASE */
+
 @import url("https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600&display=swap");
 
 @tailwind base;
@@ -6,6 +8,14 @@
 
 #root {
   margin: 0 auto;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  /* position: relative; */
+  align-items: center;
+  border-radius: 50%;
 }
 
 :root {
@@ -36,19 +46,40 @@ body {
   box-sizing: border-box;
 }
 
-.circle-month {
-  position: relative;
-  border: 1px solid black;
-  padding: 0;
-  margin: 1rem -25%;
-  width: 535px;
-  height: 535px;
-  border-radius: 50%;
-  list-style: none;
-  overflow: hidden;
-  background: rgba(0, 0, 0, 1);
-  transform: rotate(210deg);
+/* KEYFRAMES */
+
+.fade-in-out {
+  opacity: 0;
+  animation: fade-in 1s ease-in forwards;
 }
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* CLOCK  */
+
+.calendar-clock {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42rem;
+}
+
+/* MONTH CIRCLE */
+
 li {
   overflow: hidden;
   position: absolute;
@@ -64,24 +95,6 @@ li {
 
 li:hover {
   color: white;
-}
-.text {
-  position: absolute;
-  left: -100%;
-  width: 200%;
-  height: 200%;
-  text-align: center;
-  -webkit-transform: skewY(60deg) rotate(15deg);
-  -ms-transform: skewY(60deg) rotate(15deg);
-  transform: skewY(60deg) rotate(15deg);
-  padding-top: 20px;
-  font-family: "Vollkorn", serif;
-}
-
-.text:hover {
-  /* box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6); */
-  background-color: rgba(255, 255, 255, 0.25);
-  /* color: aquamarine; */
 }
 
 li:first-child {
@@ -145,139 +158,61 @@ li:nth-child(12) {
   transform: rotate(330deg) skewY(-60deg);
 }
 
-#circle-days {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  /* transform: translate(-16%, -50%); */
-  border-radius: 50%;
-  border: 1px solid white;
-  width: 535px;
-  height: 535px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #242424;
+.months-circle-container {
+  z-index: 7;
+  position: relative;
 }
 
-#circle-hours {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
+.months-circle {
+  position: relative;
   border: 1px solid black;
-  background: white;
-  background-color: #242424;
+  padding: 0;
   width: 535px;
   height: 535px;
-  display: flex;
-  justify-content: center;
-  z-index: 4;
-}
-
-#circle-astro {
-  position: absolute;
-  transform: translate(-50%, -50%);
   border-radius: 50%;
-  border: 1px solid white;
-  width: 650px;
-  height: 650px;
-  top: 50%;
-  left: 50%;
+  list-style: none;
   overflow: hidden;
-}
-#circle-c {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  border: 1px solid white;
-  width: 650px;
-  height: 650px;
-  top: 50%;
-  left: 50%;
-  overflow: hidden;
+  background: rgba(0, 0, 0, 1);
+  transform: rotate(210deg);
 }
 
-.c-circle {
+.month {
   position: absolute;
-  color: papayawhip;
+  left: -100%;
+  width: 200%;
+  height: 200%;
   text-align: center;
-  border-radius: 50%;
-  transition: transform 0.2s ease 0s;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  transform: rotate(0deg);
-}
-
-.astro-circle {
-  position: absolute;
-  color: papayawhip;
-  text-align: center;
-  border-radius: 50%;
-  transition: transform 0.2s ease 0s;
-  width: 50px;
-  height: 50px;
-  line-height: 64px;
-}
-
-.c-circle-1,
-.c-circle-2,
-.c-circle-3,
-.c-circle-4 {
-  position: absolute;
-  color: papayawhip;
-  text-align: center;
-  border-radius: 50%;
-  transition: transform 0.2s ease 0s;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  transform: rotate(0deg);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.c-circle-1 {
-  top: 0.2rem !important;
-}
-
-.c-circle-2 {
-  left: 37.25rem !important;
-}
-
-.c-circle-3 {
-  top: 37.1875rem !important;
-}
-
-.c-circle-4 {
-  left: 0.2rem !important;
-}
-
-.N,
-.E,
-.S,
-.W {
-  width: 1.4rem;
-  background: black;
-  border: 1px solid white;
-  height: 1.4rem;
-  line-height: 1.4rem;
+  -webkit-transform: skewY(60deg) rotate(15deg);
+  -ms-transform: skewY(60deg) rotate(15deg);
+  transform: skewY(60deg) rotate(15deg);
+  padding-top: 20px;
   font-family: "Vollkorn", serif;
 }
 
-.astro-item-1:hover,
-.astro-item-2:hover,
-.astro-item-3:hover,
-.astro-item-4:hover,
-.astro-item-5:hover,
-.astro-item-6:hover,
-.astro-item-7:hover,
-.astro-item-8:hover,
-.astro-item-9:hover,
-.astro-item-10:hover,
-.astro-item-11:hover,
-.astro-item-12:hover {
-  color: yellow;
+.month:hover {
+  /* box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6); */
+  background-color: rgba(255, 255, 255, 0.25);
+  /* color: aquamarine; */
+}
+
+/* DAYS CIRCLE  */
+
+.days-circle-container {
+  display: none;
+  z-index: 6;
+}
+
+.days-circle {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 535px;
+  height: 535px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #242424;
 }
 
 .circle {
@@ -299,158 +234,114 @@ li:nth-child(12) {
   background: rgba(0, 0, 0, 0.8);
 }
 
-.test {
-  margin-bottom: 1rem;
-}
-
-#container {
-  display: flex;
-  justify-content: center;
-  /* position: relative; */
-  align-items: center;
-  border-radius: 50%;
-}
-
-.circle-days-container,
-.circle-hours-container,
-.circle-month-container,
-.circle-astro-container {
-  display: flex;
-  justify-content: center;
-  border-radius: 50%;
-}
-
 .center-image {
   width: 13rem;
   height: 13rem;
-  /* border-radius: 50%; */
   color: white;
 }
 
-#circle-hours .circle {
-  background: indianred;
+/* HOURS CIRCLE */
 
-  color: white;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-#circle-hours .circle:hover {
-  transform: scale(1.2);
-  cursor: pointer;
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.cardinals {
-  color: darkgrey;
-  font-family: "Vollkorn", serif;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-.cardinal-E:hover,
-.cardinal-S:hover,
-.cardinal-N:hover,
-.cardinal-W:hover {
-  color: lightgrey;
-}
-
-.cardinal-N {
+.hours-circle {
   position: absolute;
-  top: -1.45rem;
-  left: 16.2rem;
-  background: rgba(0, 0, 0, 1);
-
-  padding: 0.1rem 0.1rem;
-  border: 1px solid white;
-  line-height: 1.1rem;
-  width: 1.1rem;
-}
-
-.cardinal-E {
-  position: absolute;
-  left: 34.73rem;
-  top: 17.1rem;
-  background: rgba(0, 0, 0, 1);
-
-  padding: 0.1rem 0.1rem;
-  border: 1px solid white;
-  line-height: 1.1rem;
-  width: 1.1rem;
-}
-
-.cardinal-S {
-  position: absolute;
-  top: 35.5rem;
-  left: 16.2rem;
-  background: rgba(0, 0, 0, 1);
-
-  padding: 0.1rem 0.1rem;
-  border: 1px solid white;
-  line-height: 1.1rem;
-  width: 1.1rem;
-}
-
-.cardinal-W {
-  position: absolute;
-  top: 17.1rem;
-  left: -2.4rem;
-  background: rgba(0, 0, 0, 1);
-  padding: 0.1rem 0;
-  border: 1px solid white;
-  line-height: 1.3rem;
-  width: 1.3rem;
-}
-
-.calendar-clock {
-  height: 100vh;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid black;
+  background: white;
+  background-color: #242424;
+  width: 535px;
+  height: 535px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 42rem;
+  z-index: 4;
 }
 
-.vertical-line-n {
-  border-left: 1px solid lightgrey;
+/* ASTRO CIRCLE */
+
+.astro-circle {
   position: absolute;
-  height: 0.3rem;
-  left: 16.672rem;
-  top: 0.7rem;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 650px;
+  height: 650px;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
 }
 
-.vertical-line-s {
-  border-left: 2px solid lightgrey;
+.astro-circle-item {
   position: absolute;
-  height: 0.3rem;
-  left: 16.73rem;
-  top: 34.6rem;
+  color: papayawhip;
+  text-align: center;
+  border-radius: 50%;
+  transition: transform 0.2s ease 0s;
+  width: 50px;
+  height: 50px;
+  line-height: 64px;
 }
 
-.horizontal-line-e {
-  position: absolute;
-  width: 0.3rem;
-  top: 17.15rem;
-  left: 33.5rem;
+.astro-item-4 {
+  transform: rotate(345deg);
 }
 
-.horizontal-line-w {
-  position: absolute;
-  width: 0.3rem;
-  top: 17.15rem;
-  left: -0.5rem;
+.astro-item-5 {
+  transform: rotate(15deg);
 }
 
-.circle-month-container {
-  z-index: 7;
-  position: relative;
+.astro-item-6 {
+  transform: rotate(45deg);
 }
 
-.circle-days-container {
-  display: none;
-  z-index: 6;
+.astro-item-7 {
+  transform: rotate(75deg);
 }
 
-.circle-days-container {
-  display: none;
+.astro-item-8 {
+  transform: rotate(105deg);
+}
+
+.astro-item-9 {
+  transform: rotate(135deg);
+}
+
+.astro-item-10 {
+  transform: rotate(165deg);
+}
+
+.astro-item-11 {
+  transform: rotate(195deg);
+}
+
+.astro-item-12 {
+  transform: rotate(255deg);
+}
+
+.astro-item-1 {
+  transform: rotate(225deg);
+}
+
+.astro-item-2 {
+  transform: rotate(285deg);
+}
+
+.astro-item-3 {
+  transform: rotate(315deg);
+}
+
+.astro-item-1:hover,
+.astro-item-2:hover,
+.astro-item-3:hover,
+.astro-item-4:hover,
+.astro-item-5:hover,
+.astro-item-6:hover,
+.astro-item-7:hover,
+.astro-item-8:hover,
+.astro-item-9:hover,
+.astro-item-10:hover,
+.astro-item-11:hover,
+.astro-item-12:hover {
+  color: yellow;
 }
 
 .divider-1 {
@@ -561,76 +452,98 @@ li:nth-child(12) {
   border-left: 1px solid white;
 }
 
-.astro-item-4 {
-  transform: rotate(345deg);
+/* CARDINAL CIRCLE */
+
+.cardinal-circle {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 650px;
+  height: 650px;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
 }
 
-.astro-item-5 {
-  transform: rotate(15deg);
+.cardinals {
+  color: darkgrey;
+  font-family: "Vollkorn", serif;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
-.astro-item-6 {
-  transform: rotate(45deg);
+.cardinal-1,
+.cardinal-2,
+.cardinal-3,
+.cardinal-4 {
+  position: absolute;
+  color: papayawhip;
+  text-align: center;
+  border-radius: 50%;
+  transition: transform 0.2s ease 0s;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  transform: rotate(0deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.astro-item-7 {
-  transform: rotate(75deg);
+.cardinal-1 {
+  top: 0.2rem !important;
 }
 
-.astro-item-8 {
-  transform: rotate(105deg);
+.cardinal-2 {
+  left: 37.25rem !important;
 }
 
-.astro-item-9 {
-  transform: rotate(135deg);
+.cardinal-3 {
+  top: 37.1875rem !important;
 }
 
-.astro-item-10 {
-  transform: rotate(165deg);
+.cardinal-4 {
+  left: 0.2rem !important;
 }
 
-.astro-item-11 {
-  transform: rotate(195deg);
+.N,
+.E,
+.S,
+.W {
+  width: 1.4rem;
+  background: black;
+  border: 1px solid white;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  font-family: "Vollkorn", serif;
 }
 
-.astro-item-12 {
-  transform: rotate(255deg);
+.days-circle-container,
+.hours-circle-container,
+.months-circle-container,
+.astro-circle-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
 }
 
-.astro-item-1 {
-  transform: rotate(225deg);
+.hours-circle .circle {
+  background: indianred;
+
+  color: white;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
-.astro-item-2 {
-  transform: rotate(285deg);
+.hours-circle .circle:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.8);
 }
 
-.astro-item-3 {
-  transform: rotate(315deg);
-}
-
-.fade-in-out {
-  opacity: 0;
-  animation: fade-in 1s ease-in forwards;
-}
-
-@keyframes fade-in {
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+/* HELPERS */
 
 .show {
-  /* z-index: 400; */
   display: flex;
   justify-content: flex-start;
   align-content: center;
@@ -647,6 +560,8 @@ li:nth-child(12) {
 .hide {
   display: none;
 }
+
+/* LIFE TRACKER  */
 
 .lifetracker-container {
   height: 100vh;
