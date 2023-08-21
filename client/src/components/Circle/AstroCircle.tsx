@@ -15,7 +15,6 @@ import {
 import { Dividers } from "..";
 
 const astroSymbols = [
-  <IconZodiacAquarius className="astro-item-1" size={21} />,
   <IconZodiacAries className="astro-item-2" size={21} />,
   <IconZodiacTaurus className="astro-item-3" size={21} />,
   <IconZodiacGemini className="astro-item-4" size={21} />,
@@ -26,10 +25,11 @@ const astroSymbols = [
   <IconZodiacScorpio className="astro-item-9" size={21} />,
   <IconZodiacSagittarius className="astro-item-10" size={21} />,
   <IconZodiacCapricorn className="astro-item-11" size={21} />,
+  <IconZodiacAquarius className="astro-item-1" size={21} />,
   <IconZodiacPisces className="astro-item-12" size={21} />,
 ];
 
-const AstroCircle = ({}) => {
+const AstroCircle = ({ setToggleMonth }) => {
   return (
     <>
       <div id="circle-astro">

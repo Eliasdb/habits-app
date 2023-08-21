@@ -37,7 +37,7 @@ body {
   list-style: none;
   overflow: hidden;
   background: rgba(0, 0, 0, 1);
-  transform: rotate(209deg);
+  transform: rotate(210deg);
 }
 li {
   overflow: hidden;
@@ -159,16 +159,19 @@ li:nth-child(12) {
   /* left: 72%;
   top: 29.4%; */
   /* margin-top: 18rem; */
-  margin-top: 97rem;
+  /* margin-top: 97rem; */
 
   transform: translate(-50%, -50%);
   border-radius: 50%;
   /* box-shadow: black 0px 0px 35px 8.75px inset; */
   border: 1px solid black;
   background: white;
+  background-color: #242424;
   width: 535px;
   height: 535px;
-  /* display: none; */
+  display: flex;
+  justify-content: center;
+  z-index: 4;
 }
 
 #circle-astro {
@@ -203,8 +206,19 @@ li:nth-child(12) {
   line-height: 64px;
 }
 
-.astro-item:hover {
-  color: white;
+.astro-item-1:hover,
+.astro-item-2:hover,
+.astro-item-3:hover,
+.astro-item-4:hover,
+.astro-item-5:hover,
+.astro-item-6:hover,
+.astro-item-7:hover,
+.astro-item-8:hover,
+.astro-item-9:hover,
+.astro-item-10:hover,
+.astro-item-11:hover,
+.astro-item-12:hover {
+  color: yellow;
 }
 
 .circle {
@@ -255,6 +269,9 @@ li:nth-child(12) {
 
 #circle-hours .circle {
   background: indianred;
+
+  color: white;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 #circle-hours .circle:hover {
@@ -278,11 +295,10 @@ li:nth-child(12) {
 
 .cardinal-N {
   position: absolute;
-  top: -1.3rem;
-  left: 16.2rem;
+  top: -1.45rem;
+  left: 16.1rem;
   background: #242424;
-  padding: 0.1rem 0;
-
+  padding: 0.1rem 0.1rem;
   border: 1px solid white;
   width: 1rem;
   height: 1rem;
@@ -291,10 +307,11 @@ li:nth-child(12) {
 
 .cardinal-E {
   position: absolute;
-  left: 34.8rem;
-  top: 17rem;
+  left: 34.73rem;
+  top: 17.1rem;
   background: #242424;
-  padding: 0.1rem 0;
+  padding: 0.1rem 0.1rem;
+
   border: 1px solid white;
   width: 1rem;
   height: 1rem;
@@ -303,10 +320,11 @@ li:nth-child(12) {
 
 .cardinal-S {
   position: absolute;
-  top: 35.7rem;
-  left: 16.2rem;
+  top: 35.6rem;
+  left: 16.1rem;
   background: #242424;
-  padding: 0.1rem 0;
+  padding: 0.1rem 0.1rem;
+
   border: 1px solid white;
   width: 1rem;
   height: 1rem;
@@ -316,9 +334,10 @@ li:nth-child(12) {
 .cardinal-W {
   position: absolute;
   top: 17.1rem;
-  left: -2.3rem;
+  left: -2.4rem;
   background: #242424;
-  padding: 0.1rem 0;
+  padding: 0.1rem 0.1rem;
+
   border: 1px solid white;
   width: 1rem;
   height: 1rem;
@@ -369,6 +388,10 @@ li:nth-child(12) {
 .circle-days-container {
   display: none;
   z-index: 6;
+}
+
+.circle-days-container {
+  display: none;
 }
 
 .divider-1 {
@@ -480,35 +503,35 @@ li:nth-child(12) {
 }
 
 .astro-item-4 {
-  transform: rotate(15deg);
+  transform: rotate(345deg);
 }
 
 .astro-item-5 {
-  transform: rotate(45deg);
+  transform: rotate(15deg);
 }
 
 .astro-item-6 {
-  transform: rotate(75deg);
+  transform: rotate(45deg);
 }
 
 .astro-item-7 {
-  transform: rotate(105deg);
+  transform: rotate(75deg);
 }
 
 .astro-item-8 {
-  transform: rotate(135deg);
+  transform: rotate(105deg);
 }
 
 .astro-item-9 {
-  transform: rotate(165deg);
+  transform: rotate(135deg);
 }
 
 .astro-item-10 {
-  transform: rotate(195deg);
+  transform: rotate(165deg);
 }
 
 .astro-item-11 {
-  transform: rotate(225deg);
+  transform: rotate(195deg);
 }
 
 .astro-item-12 {
@@ -516,15 +539,15 @@ li:nth-child(12) {
 }
 
 .astro-item-1 {
-  transform: rotate(285deg);
+  transform: rotate(225deg);
 }
 
 .astro-item-2 {
-  transform: rotate(315deg);
+  transform: rotate(285deg);
 }
 
 .astro-item-3 {
-  transform: rotate(345deg);
+  transform: rotate(315deg);
 }
 
 .fade-in-out {
@@ -551,10 +574,25 @@ li:nth-child(12) {
   animation: fade-out 4s 1s ease-out forwards;
 } */
 
-.hide {
-  display: none;
+.circle-hours-container,
+.circle-hours-container {
+  /* display: flex; */
+}
+.show {
+  z-index: 400;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: flex-start;
 }
 
-.show {
-  display: block;
+.show-days {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: flex-start;
+}
+
+.hide {
+  display: none;
 }

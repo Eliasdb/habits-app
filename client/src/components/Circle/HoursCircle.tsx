@@ -2,9 +2,9 @@ interface HoursCircleProps {
   hours: [Date];
 }
 
-const HoursCircle = ({ hours }: HoursCircleProps) => {
+const HoursCircle = ({ hours, toggleHours }: HoursCircleProps) => {
   return (
-    <div className="circle-hours-container">
+    <div className={`circle-hours-container ${toggleHours ? "show" : "hide"}`}>
       <div id="circle-hours">
         {hours &&
           hours.map((hour, i) => {

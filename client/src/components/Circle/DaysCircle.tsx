@@ -16,14 +16,16 @@ const DaysCircle = ({
   days,
   setNumberOfDay,
   toggleMonth,
-  setToggleMonth,
+  toggleHours,
+  setToggleHours,
 }: DaysCircleProps) => {
   const [weekday, setWeekDay] = useState<string>(`${Monday}`);
 
   return (
     <div
-      className={`circle-days-container ${toggleMonth ? "show" : ""}`}
-      onMouseLeave={() => setToggleMonth(false)}
+      className={`circle-days-container ${toggleMonth ? "show-days" : "hide"} ${
+        toggleHours && "hide"
+      }`}
     >
       <div id="circle-days">
         {days.map((day, i) => {
@@ -31,6 +33,7 @@ const DaysCircle = ({
             <div
               key={i}
               className="circle"
+              onDoubleClick={() => setToggleHours(true)}
               onClick={() => {
                 setNumberOfDay(i + 1);
                 console.log(day);
