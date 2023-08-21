@@ -1,13 +1,15 @@
+import CardinalsCircle from "./Circle/CardinalsCircls";
+import AstroCircle from "./Circle/AstroCircle";
+import MonthsCircle from "./Circle/MonthsCircle";
 import DaysCircle from "./Circle/DaysCircle";
 import HourCircle from "./Circle/HoursCircle";
-import MonthsCircle from "./Circle/MonthsCircle";
-import AstroCircle from "./Circle/AstroCircle";
 import Dividers from "./Circle/Dividers";
-import Cardinals from "./Circle/Cardinals";
+import Cardinal from "./Circle/Cardinal";
 
 export {
   AstroCircle,
-  Cardinals,
+  Cardinal,
+  CardinalsCircle,
   DaysCircle,
   Dividers,
   HourCircle,

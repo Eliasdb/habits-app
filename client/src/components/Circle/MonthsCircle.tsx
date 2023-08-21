@@ -1,5 +1,3 @@
-import { Cardinals, Dividers } from "../index";
-
 interface MonthsCircleProps {
   months: [{}];
   setNumberOfMonth: (index: number) => number;
@@ -13,7 +11,6 @@ const MonthsCircle = ({
 }: MonthsCircleProps) => {
   return (
     <section className={`circle-month-container ${toggleMonth ? "hide" : ""}`}>
-      <Cardinals />
       <ul className="circle-month">
         {months.map((month, index) => {
           return (

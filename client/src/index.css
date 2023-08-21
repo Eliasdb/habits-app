@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+#root {
+  margin: 0 auto;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -175,16 +179,36 @@ li:nth-child(12) {
 #circle-astro {
   position: absolute;
   transform: translate(-50%, -50%);
-  /* transform: translate(-42.2%, -50%); */
   border-radius: 50%;
-  /* box-shadow: black 0px 0px 35px 8.75px inset; */
   border: 1px solid white;
-  /* background: rgba(0, 0, 0, 0.2); */
   width: 650px;
   height: 650px;
   top: 50%;
   left: 50%;
   overflow: hidden;
+}
+#circle-c {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 650px;
+  height: 650px;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+}
+
+.c-circle {
+  position: absolute;
+  color: papayawhip;
+  text-align: center;
+  border-radius: 50%;
+  transition: transform 0.2s ease 0s;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  transform: rotate(0deg);
 }
 
 .astro-circle {
@@ -196,6 +220,52 @@ li:nth-child(12) {
   width: 50px;
   height: 50px;
   line-height: 64px;
+}
+
+.c-circle-1,
+.c-circle-2,
+.c-circle-3,
+.c-circle-4 {
+  position: absolute;
+  color: papayawhip;
+  text-align: center;
+  border-radius: 50%;
+  transition: transform 0.2s ease 0s;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  transform: rotate(0deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-circle-1 {
+  top: 0.2rem !important;
+}
+
+.c-circle-2 {
+  left: 37.25rem !important;
+}
+
+.c-circle-3 {
+  top: 37.1875rem !important;
+}
+
+.c-circle-4 {
+  left: 0.2rem !important;
+}
+
+.N,
+.E,
+.S,
+.W {
+  width: 1.4rem;
+  background: black;
+  border: 1px solid white;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  font-family: "Vollkorn", serif;
 }
 
 .astro-item-1:hover,
@@ -598,4 +668,8 @@ li:nth-child(12) {
 svg {
   display: inline;
   vertical-align: 0%;
+}
+
+.dob-input {
+  text-align: center;
 }

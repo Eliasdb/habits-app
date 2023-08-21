@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import {
   AstroCircle,
+  CardinalsCircle,
   DaysCircle,
   HourCircle,
   MonthsCircle,
@@ -57,6 +58,7 @@ const CalendarClock = () => {
         />
         <HourCircle hours={hours} toggleHours={toggleHours} />
         <AstroCircle hours={hours} setToggleMonth={setToggleMonth} />
+        <CardinalsCircle />
       </section>
     </main>
   );

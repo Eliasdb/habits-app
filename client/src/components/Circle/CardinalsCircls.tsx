@@ -1,17 +1,21 @@
-import { Dividers } from "..";
-import { astroSymbols } from "../../data/data";
+import { Cardinal } from "..";
 
-const AstroCircle = () => {
+const CardinalsCircle = () => {
+  const cardinals = [
+    <Cardinal cardinalDirection="N" />,
+    <Cardinal cardinalDirection="E" />,
+    <Cardinal cardinalDirection="S" />,
+    <Cardinal cardinalDirection="W" />,
+  ];
   return (
     <>
-      <section id="circle-astro">
-        <Dividers />
-        {astroSymbols &&
-          astroSymbols.map((symbol, i) => {
+      <section id="circle-c">
+        {cardinals &&
+          cardinals.map((symbol, i) => {
             return (
               <div
                 key={i}
-                className="astro-circle"
+                className={`c-circle-${i + 1}`}
                 onClick={() => console.log(symbol)}
                 style={{
                   top: `${
@@ -19,9 +23,7 @@ const AstroCircle = () => {
                       300 +
                         -300 *
                           Math.cos(
-                            (360 / astroSymbols.length / 180) *
-                              (i + 9.5) *
-                              Math.PI
+                            (360 / cardinals.length / 180) * (i + 0) * Math.PI
                           )
                     ) + "px"
                   }`,
@@ -31,13 +33,13 @@ const AstroCircle = () => {
                         300 *
                           (true
                             ? Math.sin(
-                                (360 / astroSymbols.length / 180) *
-                                  (i + 9.5) *
+                                (360 / cardinals.length / 180) *
+                                  (i + 0) *
                                   Math.PI
                               )
                             : -Math.sin(
-                                (360 / astroSymbols.length / 180) *
-                                  (i + 9.5) *
+                                (360 / cardinals.length / 180) *
+                                  (i + 0) *
                                   Math.PI
                               ))
                     ) + "px"
@@ -52,4 +54,4 @@ const AstroCircle = () => {
     </>
   );
 };
-export default AstroCircle;
+export default CardinalsCircle;
