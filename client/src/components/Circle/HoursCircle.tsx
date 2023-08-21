@@ -4,7 +4,9 @@ interface HoursCircleProps {
 
 const HoursCircle = ({ hours, toggleHours }: HoursCircleProps) => {
   return (
-    <div className={`circle-hours-container ${toggleHours ? "show" : "hide"}`}>
+    <section
+      className={`circle-hours-container ${toggleHours ? "show" : "hide"}`}
+    >
       <div id="circle-hours">
         {hours &&
           hours.map((hour, i) => {
@@ -43,7 +45,7 @@ const HoursCircle = ({ hours, toggleHours }: HoursCircleProps) => {
             );
           })}
       </div>
-    </div>
+    </section>
   );
 };
 export default HoursCircle;

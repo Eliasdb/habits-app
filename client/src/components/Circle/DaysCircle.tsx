@@ -22,7 +22,7 @@ const DaysCircle = ({
   const [weekday, setWeekDay] = useState<string>(`${Monday}`);
 
   return (
-    <div
+    <section
       className={`circle-days-container ${toggleMonth ? "show-days" : "hide"} ${
         toggleHours && "hide"
       }`}
@@ -96,7 +96,7 @@ const DaysCircle = ({
         })}
         <img className="center-image" src={weekday} alt="image" />
       </div>
-    </div>
+    </section>
   );
 };
 export default DaysCircle;

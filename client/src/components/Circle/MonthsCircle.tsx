@@ -12,7 +12,7 @@ const MonthsCircle = ({
   setToggleMonth,
 }: MonthsCircleProps) => {
   return (
-    <div className={`circle-month-container ${toggleMonth ? "hide" : ""}`}>
+    <section className={`circle-month-container ${toggleMonth ? "hide" : ""}`}>
       <Cardinals />
       <ul className="circle-month">
         {months.map((month, index) => {
@@ -31,7 +31,7 @@ const MonthsCircle = ({
           );
         })}
       </ul>
-    </div>
+    </section>
   );
 };
 export default MonthsCircle;

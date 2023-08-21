@@ -32,7 +32,7 @@ const astroSymbols = [
 const AstroCircle = ({ setToggleMonth }) => {
   return (
     <>
-      <div id="circle-astro">
+      <section id="circle-astro">
         <Dividers />
         {astroSymbols &&
           astroSymbols.map((symbol, i) => {
@@ -76,7 +76,7 @@ const AstroCircle = ({ setToggleMonth }) => {
               </div>
             );
           })}
-      </div>
+      </section>
     </>
   );
 };
