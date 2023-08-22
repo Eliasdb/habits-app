@@ -1,7 +1,7 @@
 import { Dividers } from "..";
 import { astroSymbols } from "../../data/data";
 
-const AstroCircle = () => {
+const AstroCircle = ({ setCategory }) => {
   return (
     <>
       <section className="astro-circle">
@@ -12,7 +12,7 @@ const AstroCircle = () => {
               <div
                 key={i}
                 className="astro-circle-item"
-                onClick={() => console.log(symbol)}
+                // onClick={() => console.log(symbol)}
                 style={{
                   top: `${
                     String(
@@ -44,7 +44,13 @@ const AstroCircle = () => {
                   }`,
                 }}
               >
-                {symbol}
+                <button
+                  type="button"
+                  className="symbol-btn"
+                  onClick={() => setCategory(symbol.props.id)}
+                >
+                  {symbol}
+                </button>
               </div>
             );
           })}

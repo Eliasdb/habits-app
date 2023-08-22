@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import {
+  AddTask,
   AstroCircle,
   CardinalsCircle,
+  ConfirmTask,
   DaysCircle,
   HourCircle,
   MonthsCircle,
@@ -24,6 +26,9 @@ const CalendarClock = () => {
   const [toggleMonth, setToggleMonth] = useState(false);
   const [toggleHours, setToggleHours] = useState(false);
 
+  const [category, setCategory] = useState();
+  const [task, setTask] = useState("");
+
   useEffect(() => {
     let months = useGetMonths("1-1-2023", "12-1-2023");
     setMonths(months);
@@ -40,33 +45,58 @@ const CalendarClock = () => {
   }, [days, numberOfDay]);
 
   return (
-    <main className="calendar-clock">
-      <section id="container">
-        <MonthsCircle
-          months={months}
-          setMonths={setMonths}
-          toggleMonth={toggleMonth}
-          setNumberOfMonth={setNumberOfMonth}
-          setToggleMonth={setToggleMonth}
-        />
-        <DaysCircle
-          days={days}
-          numberOfMonth={numberOfMonth}
-          setNumberOfDay={setNumberOfDay}
-          toggleMonth={toggleMonth}
-          setToggleMonth={setToggleMonth}
-          toggleHours={toggleHours}
-          setToggleHours={setToggleHours}
-        />
-        <HourCircle
-          hours={hours}
-          toggleHours={toggleHours}
-          setSelectedDate={setSelectedDate}
-        />
-        <AstroCircle hours={hours} setToggleMonth={setToggleMonth} />
-        <CardinalsCircle />
+    <>
+      <main className="calendar-clock">
+        <section id="container">
+          <AddTask />
+          <ConfirmTask />
+          <MonthsCircle
+            months={months}
+            setMonths={setMonths}
+            toggleMonth={toggleMonth}
+            setNumberOfMonth={setNumberOfMonth}
+            setToggleMonth={setToggleMonth}
+          />
+          <DaysCircle
+            days={days}
+            numberOfMonth={numberOfMonth}
+            setNumberOfDay={setNumberOfDay}
+            toggleMonth={toggleMonth}
+            setToggleMonth={setToggleMonth}
+            toggleHours={toggleHours}
+            setToggleHours={setToggleHours}
+          />
+          <HourCircle
+            hours={hours}
+            toggleHours={toggleHours}
+            setSelectedDate={setSelectedDate}
+          />
+          <AstroCircle
+            hours={hours}
+            setToggleMonth={setToggleMonth}
+            setCategory={setCategory}
+          />
+          {/* <CardinalsCircle /> */}
+        </section>
+      </main>
+      <section className="task-input-container">
+        <div className="task-input">
+          {/* <input
+            className="task-input"
+            type="text"
+            value={task}
+            onChange={(e) => e.target.value}
+          /> */}
+          <input
+            className="inp"
+            placeholder="Enter task"
+            value={task}
+            onChange={(e) => setTask(e.target.value)}
+          />
+        </div>
       </section>
-    </main>
+      <section className="task-items"></section>
+    </>
   );
 };
 export default CalendarClock;

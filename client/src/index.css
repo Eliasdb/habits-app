@@ -70,7 +70,7 @@ body {
 /* CLOCK  */
 
 .calendar-clock {
-  height: 100vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -271,6 +271,7 @@ li:nth-child(12) {
 .astro-circle {
   position: absolute;
   transform: translate(-50%, -50%);
+  transform: translate(-50%, -65%);
   border-radius: 50%;
   border: 1px solid white;
   width: 650px;
@@ -571,6 +572,20 @@ li:nth-child(12) {
   display: none;
 }
 
+/* ADD TASK ICON */
+
+.add-task-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4rem;
+}
+
+.tabler-icon,
+.tabler-icon-plus {
+  width: 2.5rem;
+  height: 2.5rem;
+}
 /* LIFE TRACKER  */
 
 .lifetracker-container {
@@ -633,4 +648,38 @@ svg {
 
 .title {
   margin-bottom: 0.2rem;
+}
+
+.symbol-btn:visited {
+  background-color: red;
+}
+
+.inp {
+  border: none;
+  border-bottom: 1px solid white;
+  padding: 20px 43px;
+  outline: none;
+  background: none;
+  color: lightgray;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: text-indent 0.8s 0.8s ease;
+  text-indent: -120%;
+  opacity: 1;
+}
+
+.task-input-container {
+  display: flex;
+  justify-content: center;
+}
+
+.confirm-btn {
+  position: absolute;
+  /* z-index: 400; */
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid black;
+  background: black;
 }

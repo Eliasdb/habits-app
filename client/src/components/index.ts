@@ -10,10 +10,14 @@ import MonthBullets from "./LifeBullets/MonthBullets";
 import WeekBullets from "./LifeBullets/WeekBullets";
 import YearBullets from "./LifeBullets/YearBullets";
 import InputFieldBullet from "./LifeBullets/InputFieldBullet";
+import AddTask from "./Circle/AddTask";
+import ConfirmTask from "./Circle/ConfirmTask";
 
 export {
+  AddTask,
   AstroCircle,
   BaseCircle,
+  ConfirmTask,
   Cardinal,
   CardinalsCircle,
   DaysCircle,

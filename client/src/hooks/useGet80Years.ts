@@ -1,15 +1,12 @@
 const useGet80Years = (dob) => {
   let dateOfBirth = new Date(dob);
   let dateOfBirthCopy = new Date(dob);
-  let dateOfBirthSecondCopy = new Date(dob);
 
   let today = new Date();
   const dobPlus80 = new Date(dateOfBirth.getTime() + 2524556160000);
   let birthYear = dateOfBirth.getFullYear();
   const deathYear = dobPlus80.getFullYear();
-  const yearsMonthsWeeks = [
-    { years: [], months: [], weeks: [], filteredMonths: [] },
-  ];
+  const yearsMonthsWeeks = [{ years: [], months: [], weeks: [] }];
 
   Date.prototype.addDay = function (days) {
     let date = new Date(this?.valueOf());
@@ -17,7 +14,7 @@ const useGet80Years = (dob) => {
     return date;
   };
 
-  for (var i = birthYear; i < deathYear; i++) {
+  for (var i = birthYear; i <= deathYear; i++) {
     yearsMonthsWeeks[0].years.push(birthYear);
     birthYear++;
   }
