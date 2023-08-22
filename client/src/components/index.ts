@@ -6,6 +6,10 @@ import HourCircle from "./Circle/HoursCircle";
 import Dividers from "./Circle/Dividers";
 import Cardinal from "./Circle/Cardinal";
 import BaseCircle from "./Circle/Circle";
+import MonthBullets from "./LifeBullets/MonthBullets";
+import WeekBullets from "./LifeBullets/WeekBullets";
+import YearBullets from "./LifeBullets/YearBullets";
+import InputFieldBullet from "./LifeBullets/InputFieldBullet";
 
 export {
   AstroCircle,
@@ -16,4 +20,8 @@ export {
   Dividers,
   HourCircle,
   MonthsCircle,
+  MonthBullets,
+  InputFieldBullet,
+  WeekBullets,
+  YearBullets,
 };

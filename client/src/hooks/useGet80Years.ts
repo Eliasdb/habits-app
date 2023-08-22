@@ -23,23 +23,20 @@ const useGet80Years = (dob) => {
   }
 
   while (dateOfBirth < dobPlus80) {
-    yearsMonthsWeeks[0].months.push(
-      dateOfBirth.toLocaleString("en", { month: "short" })
-    );
+    yearsMonthsWeeks[0].months.push(dateOfBirth.toLocaleString("en"));
     dateOfBirth.setMonth(dateOfBirth.getMonth() + 1);
   }
+
+  const formattedMonths = yearsMonthsWeeks[0].months.map((item) =>
+    item.slice(0, 10).replace(",", "")
+  );
+  yearsMonthsWeeks[0].months = formattedMonths;
 
   while (dateOfBirthCopy < dobPlus80) {
     yearsMonthsWeeks[0].weeks.push(new Date(dateOfBirthCopy));
     dateOfBirthCopy = dateOfBirthCopy.addDay(7);
   }
 
-  while (dateOfBirthSecondCopy < today) {
-    yearsMonthsWeeks[0].filteredMonths.push(
-      dateOfBirthSecondCopy.toLocaleString("en", { month: "short" })
-    );
-    dateOfBirthSecondCopy.setMonth(dateOfBirthSecondCopy.getMonth() + 1);
-  }
   console.log(yearsMonthsWeeks);
 
   //   console.log(yearsMonthsWeeks);

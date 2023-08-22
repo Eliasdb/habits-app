@@ -1,10 +1,10 @@
-import { CalendarClock, LifeTracker } from "./pages";
+import { CalendarClock, LifeBullets } from "./pages";
 
 function App() {
   return (
     <>
       <CalendarClock />
-      <LifeTracker />
+      <LifeBullets />
     </>
   );
 }

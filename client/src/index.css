@@ -1,7 +1,6 @@
 /* BASE */
 
-@import url("https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Vollkorn:wght@400;500;600&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -579,6 +578,7 @@ li:nth-child(12) {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: "Poppins", sans-serif;
 }
 
 .input-section {
@@ -595,12 +595,14 @@ svg {
 
 .dob-input {
   text-align: center;
+  background-color: black;
 }
 
 .years-content,
 .months-content,
 .weeks-content {
   max-width: 695px;
+  margin-bottom: 3rem;
 }
 
 .years,
@@ -615,12 +617,20 @@ svg {
 .month-item,
 .week-item {
   border-radius: 50%;
-  width: 0.8rem;
-  height: 0.8rem;
+  width: 0.5rem;
+  height: 0.5rem;
   border: 1px solid white;
-  margin: 0.1rem;
+  margin: 0.2rem;
 }
 
 .month-item {
   border: none;
+}
+
+.week-item {
+  border: none;
+}
+
+.title {
+  margin-bottom: 0.2rem;
 }

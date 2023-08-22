@@ -1,4 +1,4 @@
 import CalendarClock from "./CalendarClock";
-import LifeTracker from "./LifeTracker";
+import LifeBullets from "./LifeBullets";
 
-export { CalendarClock, LifeTracker };
+export { CalendarClock, LifeBullets };
