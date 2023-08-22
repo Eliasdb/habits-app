@@ -12,8 +12,10 @@ import useGetDaysInMonth from "../hooks/useGetDaysInMonth";
 import useGetHoursInDay from "../hooks/useGetHoursInDay";
 
 const CalendarClock = () => {
-  const [numberOfMonth, setNumberOfMonth] = useState<number>(0);
   const [numberOfDay, setNumberOfDay] = useState<number>(1);
+  const [numberOfMonth, setNumberOfMonth] = useState<number>(0);
+  const [numberOfYear, setNumberOfYear] = useState<number>(2023);
+  const [selectedDate, setSelectedDate] = useState<Date>();
 
   const [months, setMonths] = useState([]);
   const [days, setDays] = useState([]);
@@ -28,7 +30,7 @@ const CalendarClock = () => {
   }, []);
 
   useEffect(() => {
-    let days = useGetDaysInMonth(numberOfMonth, 2023);
+    let days = useGetDaysInMonth(numberOfMonth - 1, 2023);
     setDays(days);
   }, [numberOfMonth]);
 
@@ -56,7 +58,11 @@ const CalendarClock = () => {
           toggleHours={toggleHours}
           setToggleHours={setToggleHours}
         />
-        <HourCircle hours={hours} toggleHours={toggleHours} />
+        <HourCircle
+          hours={hours}
+          toggleHours={toggleHours}
+          setSelectedDate={setSelectedDate}
+        />
         <AstroCircle hours={hours} setToggleMonth={setToggleMonth} />
         <CardinalsCircle />
       </section>

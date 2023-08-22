@@ -2,7 +2,11 @@ interface HoursCircleProps {
   hours: [Date];
 }
 
-const HoursCircle = ({ hours, toggleHours }: HoursCircleProps) => {
+const HoursCircle = ({
+  hours,
+  toggleHours,
+  setSelectedDate,
+}: HoursCircleProps) => {
   return (
     <section
       className={`hours-circle-container ${toggleHours ? "show" : "hide"}`}
@@ -14,7 +18,7 @@ const HoursCircle = ({ hours, toggleHours }: HoursCircleProps) => {
               <div
                 key={i}
                 className="circle"
-                onClick={() => console.log(hour)}
+                onClick={() => setSelectedDate(hour)}
                 style={{
                   top: `${
                     String(

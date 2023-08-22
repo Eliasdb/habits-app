@@ -75,7 +75,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 42rem;
 }
 
 /* MONTH CIRCLE */
@@ -251,6 +250,18 @@ li:nth-child(12) {
   background-color: #242424;
   width: 535px;
   height: 535px;
+  display: flex;
+  justify-content: center;
+  z-index: 4;
+}
+
+.test-circle {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid black;
+  background: white;
+  background-color: #242424;
   display: flex;
   justify-content: center;
   z-index: 4;
@@ -564,7 +575,6 @@ li:nth-child(12) {
 /* LIFE TRACKER  */
 
 .lifetracker-container {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -585,4 +595,32 @@ svg {
 
 .dob-input {
   text-align: center;
+}
+
+.years-content,
+.months-content,
+.weeks-content {
+  max-width: 695px;
+}
+
+.years,
+.months,
+.weeks {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.year-item,
+.month-item,
+.week-item {
+  border-radius: 50%;
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 1px solid white;
+  margin: 0.1rem;
+}
+
+.month-item {
+  border: none;
 }

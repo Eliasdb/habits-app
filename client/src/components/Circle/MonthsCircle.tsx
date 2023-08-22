@@ -17,7 +17,7 @@ const MonthsCircle = ({
             <li
               key={index}
               onClick={() => {
-                setNumberOfMonth(index);
+                setNumberOfMonth(index + 1);
                 setToggleMonth(true);
                 console.log(month);
               }}
