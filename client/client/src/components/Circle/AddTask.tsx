@@ -1,9 +1,9 @@
 import { IconPlus } from "@tabler/icons-react";
 
-const AddTask = () => {
+const AddTask = ({ setToggleInput }) => {
   return (
     <button className="add-task-icon">
-      <IconPlus />
+      <IconPlus onClick={() => setToggleInput(true)} />
     </button>
   );
 };

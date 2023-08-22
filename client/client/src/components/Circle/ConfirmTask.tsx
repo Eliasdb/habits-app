@@ -1,12 +1,4 @@
-const ConfirmTask = () => {
-  return (
-    <button
-      type="button"
-      className="confirm-btn"
-      onClick={() => console.log("click")}
-    >
-      Add task
-    </button>
-  );
+const ConfirmTask = ({ toggleMiddle }) => {
+  return <></>;
 };
 export default ConfirmTask;

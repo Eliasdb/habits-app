@@ -12,6 +12,7 @@ import YearBullets from "./LifeBullets/YearBullets";
 import InputFieldBullet from "./LifeBullets/InputFieldBullet";
 import AddTask from "./Circle/AddTask";
 import ConfirmTask from "./Circle/ConfirmTask";
+import Tasks from "./Circle/Tasks";
 
 export {
   AddTask,
@@ -27,5 +28,6 @@ export {
   MonthBullets,
   InputFieldBullet,
   WeekBullets,
+  Tasks,
   YearBullets,
 };

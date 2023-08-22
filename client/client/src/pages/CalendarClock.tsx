@@ -7,11 +7,15 @@ import {
   DaysCircle,
   HourCircle,
   MonthsCircle,
+  Tasks,
 } from "../components";
+
+const url = "http://localhost:3003/api/v1/tasks";
 
 import useGetMonths from "../hooks/useGetMonths";
 import useGetDaysInMonth from "../hooks/useGetDaysInMonth";
 import useGetHoursInDay from "../hooks/useGetHoursInDay";
+import axios from "axios";
 
 const CalendarClock = () => {
   const [numberOfDay, setNumberOfDay] = useState<number>(1);
@@ -25,6 +29,8 @@ const CalendarClock = () => {
 
   const [toggleMonth, setToggleMonth] = useState(false);
   const [toggleHours, setToggleHours] = useState(false);
+  const [toggleInput, setToggleInput] = useState(false);
+  const [toggleMiddle, setToggleMiddle] = useState(false);
 
   const [category, setCategory] = useState();
   const [task, setTask] = useState("");
@@ -44,12 +50,28 @@ const CalendarClock = () => {
     setHours(hours);
   }, [days, numberOfDay]);
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    //  console.log(name, email);
+    try {
+      const resp = axios.post(url, {
+        task: task,
+        category: category,
+        value: 9,
+        creationdate: "2023-08-23",
+      });
+      console.log(resp);
+    } catch (error) {
+      console.log(error.response);
+    }
+  };
+
   return (
     <>
       <main className="calendar-clock">
         <section id="container">
-          <AddTask />
-          <ConfirmTask />
+          <AddTask setToggleInput={setToggleInput} toggleInput={toggleInput} />
+          <ConfirmTask toggleMiddle={toggleMiddle} />
           <MonthsCircle
             months={months}
             setMonths={setMonths}
@@ -79,8 +101,12 @@ const CalendarClock = () => {
           {/* <CardinalsCircle /> */}
         </section>
       </main>
-      <section className="task-input-container">
-        <div className="task-input">
+      <section
+        className={`task-input-container hide-input ${
+          toggleInput ? "show-input" : ""
+        }`}
+      >
+        <form className="task-input" onSubmit={handleSubmit}>
           {/* <input
             className="task-input"
             type="text"
@@ -91,11 +117,21 @@ const CalendarClock = () => {
             className="inp"
             placeholder="Enter task"
             value={task}
-            onChange={(e) => setTask(e.target.value)}
+            onChange={(e) => {
+              setToggleMiddle(true);
+              setTask(e.target.value);
+            }}
           />
-        </div>
+          <button
+            type="submit"
+            className={`confirm-btn ${toggleMiddle ? "middle-z-index" : ""}`}
+            onClick={() => console.log("click")}
+          >
+            Add
+          </button>
+        </form>
       </section>
-      <section className="task-items"></section>
+      <Tasks />
     </>
   );
 };
