@@ -22,6 +22,7 @@ const CalendarClock = () => {
   const [numberOfMonth, setNumberOfMonth] = useState<number>(0);
   const [numberOfYear, setNumberOfYear] = useState<number>(2023);
   const [selectedDate, setSelectedDate] = useState<Date>();
+  const [t, setT] = useState(false);
 
   const [months, setMonths] = useState([]);
   const [days, setDays] = useState([]);
@@ -52,6 +53,7 @@ const CalendarClock = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setT(!t);
     try {
       const resp = axios.post(url, {
         task: task,
@@ -102,7 +104,6 @@ const CalendarClock = () => {
       </main>
       <section className="task-input-container">
         <form
-          className="task-input"
           className={`task-input hide-input ${toggleInput ? "show-input" : ""}`}
           onSubmit={handleSubmit}
         >
@@ -124,13 +125,12 @@ const CalendarClock = () => {
           <button
             type="submit"
             className={`confirm-btn ${toggleMiddle ? "middle-z-index" : ""}`}
-            onClick={() => console.log("click")}
           >
             Add
           </button>
         </form>
       </section>
-      <Tasks />
+      <Tasks t={t} />
     </>
   );
 };

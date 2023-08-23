@@ -685,15 +685,18 @@ svg {
   position: absolute;
   /* z-index: 400; */
   border-radius: 50%;
-  width: 6.5rem;
-  height: 6.5rem;
+  width: 5.5rem;
+  height: 5.5rem;
   /* border: 1px solid black; */
   top: -31rem;
-  left: 7.5rem;
+  left: 8rem;
   border: 1px solid white;
   background: #4d4d4d;
 }
 
+.confirm-btn:hover {
+  background-color: black;
+}
 .hide {
   display: none;
 }
@@ -846,6 +849,7 @@ section.triangle {
   min-width: 400px;
 }
 
+.row:nth-child(2),
 .row:nth-child(3),
 .row:nth-child(4) {
   justify-content: flex-start;
@@ -853,4 +857,8 @@ section.triangle {
 
 .row:nth-child(4) {
   min-width: 533px;
+}
+
+.row:nth-child(2) {
+  min-width: 265px;
 }

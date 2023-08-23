@@ -2,43 +2,40 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 const url = "http://localhost:3003/api/v1/tasks";
 
-const Tasks = () => {
+const Tasks = ({ t }) => {
   const [taskData, setTaskData] = useState([]);
-  const [t, setT] = useState(false);
 
   const fetchData = async () => {
     try {
       const response = await axios(url);
-      const taskData = response.data;
-      const sortedBy = taskData.sort((a, b) => b.category - a.category);
-      console.log(taskData);
-
+      //   const sortedBy = taskData.sort((a, b) => b.category - a.category);
+      console.log(response);
+      //   return response;
       //   console.log(outputData);
+      const taskData = response.data;
+      setTaskData(taskData);
 
-      const FormatDataArray = (array) => {
-        // Get least perfect square that is not less than the array length
-        const sqrt = Math.ceil(Math.sqrt(array.length));
-        // const size = sqrt ** 2;
-        // Pad the array with "E" strings so to reach that perfect square size
-        const all = [...array];
-        const length = 2 * sqrt;
-        return Array.from({ length }, (_, width) => {
-          return all.splice(0, Math.min(width, length - width));
-        }).slice(1); // Skip the first subarray that was produced (empty array)
-      };
-      const FilterDataArray = () => {
-        let outputData = taskData.map(Object.values);
-        const xr = FormatDataArray(outputData);
-        let result = xr.filter((e) => e.length);
-        console.log(result);
-
-        return result;
-      };
-      const y = FilterDataArray();
+      //   const FormatDataArray = (array) => {
+      //     // Get least perfect square that is not less than the array length
+      //     const sqrt = Math.ceil(Math.sqrt(array.length));
+      //     // const size = sqrt ** 2;
+      //     // Pad the array with "E" strings so to reach that perfect square size
+      //     const all = [...array];
+      //     const length = 2 * sqrt;
+      //     return Array.from({ length }, (_, width) => {
+      //       return all.splice(0, Math.min(width, length - width));
+      //     }).slice(1); // Skip the first subarray that was produced (empty array)
+      //   };
+      //   const FilterDataArray = () => {
+      //     let outputData = taskData?.map(Object.values);
+      //     const xr = FormatDataArray(outputData);
+      //     let result = xr.filter((e) => e.length);
+      //     console.log(result);
+      //     return result;
+      //   };
+      //   const y = FilterDataArray();
 
       //   console.log(y);
-      setT(4);
-      setTaskData(y);
     } catch (error) {
       console.log(error.response);
     }
@@ -139,9 +136,7 @@ const Tasks = () => {
                 return (
                   <span style={{ color: "white", fontSize: "200px" }}>
                     &#x2B22;
-                    {/* {item[1]} */}
                   </span>
-                  //   <span>{item[0]}</span>
                 );
               })}
             </div>
