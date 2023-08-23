@@ -52,7 +52,6 @@ const CalendarClock = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    //  console.log(name, email);
     try {
       const resp = axios.post(url, {
         task: task,
@@ -101,12 +100,12 @@ const CalendarClock = () => {
           {/* <CardinalsCircle /> */}
         </section>
       </main>
-      <section
-        className={`task-input-container hide-input ${
-          toggleInput ? "show-input" : ""
-        }`}
-      >
-        <form className="task-input" onSubmit={handleSubmit}>
+      <section className="task-input-container">
+        <form
+          className="task-input"
+          className={`task-input hide-input ${toggleInput ? "show-input" : ""}`}
+          onSubmit={handleSubmit}
+        >
           {/* <input
             className="task-input"
             type="text"
