@@ -19,7 +19,7 @@ const DaysCircle = ({
   toggleHours,
   setToggleHours,
 }: DaysCircleProps) => {
-  const [weekday, setWeekDay] = useState<string>(`${Monday}`);
+  const [weekday, setWeekDay] = useState<string>(`${Wednesday}`);
 
   return (
     <section

@@ -4,6 +4,7 @@ const url = "http://localhost:3003/api/v1/tasks";
 
 const Tasks = () => {
   const [taskData, setTaskData] = useState([]);
+  const [t, setT] = useState(false);
 
   const fetchData = async () => {
     try {
@@ -11,7 +12,7 @@ const Tasks = () => {
       const taskData = response.data;
       const sortedBy = taskData.sort((a, b) => b.category - a.category);
       console.log(taskData);
-      let outputData = taskData.map(Object.values);
+
       //   console.log(outputData);
 
       const FormatDataArray = (array) => {
@@ -26,6 +27,7 @@ const Tasks = () => {
         }).slice(1); // Skip the first subarray that was produced (empty array)
       };
       const FilterDataArray = () => {
+        let outputData = taskData.map(Object.values);
         const xr = FormatDataArray(outputData);
         let result = xr.filter((e) => e.length);
         console.log(result);
@@ -35,7 +37,7 @@ const Tasks = () => {
       const y = FilterDataArray();
 
       //   console.log(y);
-
+      setT(4);
       setTaskData(y);
     } catch (error) {
       console.log(error.response);
@@ -43,7 +45,7 @@ const Tasks = () => {
   };
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [t]);
 
   return (
     <>
