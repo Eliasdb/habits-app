@@ -1,11 +1,13 @@
-import { useEffect, useState } from "react";
-import useGet80Years from "../hooks/useGet80Years";
 import {
   InputFieldBullet,
+  LifeBulletsTitle,
   MonthBullets,
   WeekBullets,
   YearBullets,
-} from "../components";
+} from "../molecules";
+
+import { useEffect, useState } from "react";
+import useGet80Years from "../hooks/useGet80Years";
 
 const LifeBullets = () => {
   const [data, setData] = useState();
@@ -17,10 +19,8 @@ const LifeBullets = () => {
   }, [dob]);
 
   return (
-    <main className="lifetracker-container">
-      <section className="tracker-title">
-        <h3 className="text-xl">Stoic simulator</h3>
-      </section>
+    <main className="life-bullets-container">
+      <LifeBulletsTitle />
       <InputFieldBullet dob={dob} setDob={setDob} />
       <YearBullets data={data} />
       <MonthBullets data={data} />

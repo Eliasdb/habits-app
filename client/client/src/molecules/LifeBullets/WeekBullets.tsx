@@ -1,7 +1,7 @@
 const WeekBullets = ({ data }) => {
   return (
     <section className="weeks-content">
-      <h5 className="text-xl title">Weeks</h5>
+      <h5 className="text-xl bullets-sub-title">Weeks</h5>
       {data?.map((item) => {
         return (
           <section className="weeks">

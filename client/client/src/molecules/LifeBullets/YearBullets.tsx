@@ -1,7 +1,7 @@
 const YearBullets = ({ data }) => {
   return (
     <section className="years-content">
-      <h5 className="text-xl title">Years</h5>
+      <h5 className="text-xl bullets-sub-title">Years</h5>
       {data?.map((item) => {
         return (
           <section className="years">

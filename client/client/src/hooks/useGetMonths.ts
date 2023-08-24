@@ -34,20 +34,7 @@ const useGetMonths = (startDate: string, endDate: string): {}[] => {
     date.setMonth(date.getMonth() + 1);
   }
 
-  // const indexArray = [5, 6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4];
-  // const newIndexArray = indexArray.map((i) => months[i]);
-
-  // return newIndexArray;
   return months;
 };
 
 export default useGetMonths;
-
-// const getNewArray = () => {
-
-//   console.log(newIndexArray);
-//   setMonths(newIndexArray);
-// };
-// useEffect(() => {
-//   getNewArray();
-// }, []);

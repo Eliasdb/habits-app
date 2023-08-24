@@ -1,7 +1,7 @@
 const MonthBullets = ({ data }) => {
   return (
     <section className="months-content">
-      <h5 className="text-xl title">Months</h5>
+      <h5 className="text-xl bullets-sub-title">Months</h5>
       {data?.map((item) => {
         return (
           <section className="months">

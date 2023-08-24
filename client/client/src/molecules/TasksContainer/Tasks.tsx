@@ -34,7 +34,7 @@ const Tasks = ({ addItem }) => {
                   .map((x, c) => {
                     if (c <= i) {
                       renderedItemsIds.push(x.id);
-                      return <Task />;
+                      return <Task key={c} />;
                     }
                   })}
               </div>
