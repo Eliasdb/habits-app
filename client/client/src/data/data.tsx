@@ -27,3 +27,5 @@ export const astroSymbols = [
   <IconZodiacAquarius id="1" className="astro-item-1" size={21} />,
   <IconZodiacPisces id="12" className="astro-item-12" size={21} />,
 ];
+
+export const url = "http://localhost:3003/api/v1/tasks";

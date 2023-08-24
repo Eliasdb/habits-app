@@ -2,10 +2,12 @@ const pool = require("../../db");
 const queries = require("./queries");
 
 const getTasks = (req, res) => {
+  //   setTimeout(() => {
   pool.query(queries.getTasks, (error, results) => {
     if (error) throw error;
     res.status(200).json(results.rows);
   });
+  //   }, 3000);
 };
 
 const getTaskById = (req, res) => {
