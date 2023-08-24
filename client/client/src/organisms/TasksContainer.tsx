@@ -1,4 +1,5 @@
-import { TaskForm, Tasks } from "../molecules";
+import { useState } from "react";
+import { TaskForm, Tasks, TasksList } from "../molecules";
 
 const TasksContainer = ({
   toggleInput,
@@ -9,6 +10,7 @@ const TasksContainer = ({
   addItem,
   task,
 }) => {
+  const [listView, setListView] = useState(false);
   return (
     <>
       <TaskForm
@@ -19,7 +21,15 @@ const TasksContainer = ({
         setTask={setTask}
         task={task}
       />
-      <Tasks addItem={addItem} />
+      {listView ? (
+        <TasksList />
+      ) : (
+        <Tasks
+          setListView={setListView}
+          listView={listView}
+          addItem={addItem}
+        />
+      )}
     </>
   );
 };

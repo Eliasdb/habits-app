@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Task from "./Task";
 import { url } from "../../data/data";
 
-const Tasks = ({ addItem }) => {
+const Tasks = ({ addItem, setListView, listView }) => {
   const [taskData, setTaskData] = useState([]);
   let renderedItemsIds = [];
 
@@ -24,7 +24,10 @@ const Tasks = ({ addItem }) => {
 
   return (
     <>
-      <section className="tasks-container">
+      <section
+        className={`tasks-container ${listView ? "hide-tasks" : ""}`}
+        onClick={() => setListView(true)}
+      >
         {taskData.map((task, i) => {
           if (i < 4)
             return (

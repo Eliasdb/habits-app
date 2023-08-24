@@ -20,6 +20,7 @@ import AddTask from "./TasksContainer/AddTask";
 import Tasks from "./TasksContainer/Tasks";
 import Task from "./TasksContainer/Task";
 import TaskForm from "./TasksContainer/TaskForm";
+import TasksList from "./TasksContainer/TasksList";
 
 export {
   AddTask,
@@ -38,5 +39,6 @@ export {
   Tasks,
   Task,
   TaskForm,
+  TasksList,
   YearBullets,
 };

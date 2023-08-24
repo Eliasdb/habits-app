@@ -1,0 +1,101 @@
+Date : 2023-08-24 18:09:54
+Directory : /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client
+Total : 50 files,  6194 codes, 65 comments, 245 blanks, all 6504 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| JSON               |          5 |      4,441 |          0 |          5 |      4,446 |
+| TypeScript JSX     |         23 |        799 |         26 |         64 |        889 |
+| CSS                |          1 |        648 |         20 |        112 |        780 |
+| JavaScript         |          8 |        137 |          9 |         29 |        175 |
+| TypeScript         |          8 |        132 |          8 |         30 |        170 |
+| JSON with Comments |          1 |         21 |          2 |          3 |         26 |
+| HTML               |          1 |         13 |          0 |          1 |         14 |
+| XML                |          2 |          2 |          0 |          0 |          2 |
+| Markdown           |          1 |          1 |          0 |          1 |          2 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                            | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                               |         50 |      6,194 |         65 |        245 |      6,504 |
+| . (Files)                                                                                                                       |          1 |         18 |          0 |          1 |         19 |
+| client                                                                                                                          |         42 |      5,280 |         57 |        216 |      5,553 |
+| client (Files)                                                                                                                  |          9 |      3,704 |          4 |         12 |      3,720 |
+| client/public                                                                                                                   |          1 |          1 |          0 |          0 |          1 |
+| client/src                                                                                                                      |         32 |      1,575 |         53 |        204 |      1,832 |
+| client/src (Files)                                                                                                              |          4 |        737 |         26 |        128 |        891 |
+| client/src/assets                                                                                                               |          1 |          1 |          0 |          0 |          1 |
+| client/src/data                                                                                                                 |          1 |         29 |          0 |          3 |         32 |
+| client/src/hooks                                                                                                                |          4 |         87 |          3 |         21 |        111 |
+| client/src/molecules                                                                                                            |         18 |        602 |         24 |         41 |        667 |
+| client/src/molecules (Files)                                                                                                    |          1 |         36 |          3 |          4 |         43 |
+| client/src/molecules/CalendarClock                                                                                              |          8 |        376 |          2 |         22 |        400 |
+| client/src/molecules/LifeBullets                                                                                                |          5 |        100 |          4 |          6 |        110 |
+| client/src/molecules/TasksContainer                                                                                             |          4 |         90 |         15 |          9 |        114 |
+| client/src/organisms                                                                                                            |          4 |        119 |          0 |         11 |        130 |
+| server                                                                                                                          |          7 |        896 |          8 |         28 |        932 |
+| server (Files)                                                                                                                  |          4 |        814 |          0 |         11 |        825 |
+| server/src                                                                                                                      |          3 |         82 |          8 |         17 |        107 |
+| server/src/tasks                                                                                                                |          3 |         82 |          8 |         17 |        107 |
++---------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                                                                        | language           | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/.eslintrc.cjs                                          | JavaScript         |         18 |          0 |          1 |         19 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/README.md                                       | Markdown           |          1 |          0 |          1 |          2 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/index.html                                      | HTML               |         13 |          0 |          1 |         14 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/package-lock.json                               | JSON               |      3,607 |          0 |          1 |      3,608 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/package.json                                    | JSON               |         34 |          0 |          1 |         35 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/postcss.config.js                               | JavaScript         |          6 |          0 |          1 |          7 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/public/vite.svg                                 | XML                |          1 |          0 |          0 |          1 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/App.tsx                                     | TypeScript JSX     |         80 |          5 |         13 |         98 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/assets/react.svg                            | XML                |          1 |          0 |          0 |          1 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/data/data.tsx                               | TypeScript JSX     |         29 |          0 |          3 |         32 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/hooks/useGet80Years.ts                      | TypeScript         |         27 |          1 |          8 |         36 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/hooks/useGetDaysInMonth.ts                  | TypeScript         |         10 |          0 |          2 |         12 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/hooks/useGetHoursInDay.ts                   | TypeScript         |         16 |          1 |          5 |         22 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/hooks/useGetMonths.ts                       | TypeScript         |         34 |          1 |          6 |         41 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/index.css                                   | CSS                |        648 |         20 |        112 |        780 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/main.tsx                                    | TypeScript JSX     |          9 |          0 |          2 |         11 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/molecules/CalendarClock/AstroCircle.tsx     | TypeScript JSX     |         59 |          1 |          2 |         62 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/molecules/CalendarClock/Cardinal.tsx        | TypeScript JSX     |          4 |          0 |          1 |          5 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/molecules/CalendarClock/CardinalsCircls.tsx | TypeScript JSX     |         56 |          0 |          2 |         58 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/molecules/CalendarClock/Circle.tsx          | TypeScript JSX     |         59 |          0 |          2 |         61 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/molecules/CalendarClock/DaysCircle.tsx      | TypeScript JSX     |         93 |          0 |         10 |        103 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/molecules/CalendarClock/Dividers.tsx        | TypeScript JSX     |         19 |          0 |          1 |         20 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/molecules/CalendarClock/HoursCircle.tsx     | TypeScript JSX     |         54 |          0 |          2 |         56 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/molecules/CalendarClock/MonthsCircle.tsx    | TypeScript JSX     |         32 |          1 |          2 |         35 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/molecules/LifeBullets/InputFieldBullet.tsx  | TypeScript JSX     |         12 |          1 |          1 |         14 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/molecules/LifeBullets/LifeBulletsTitle.tsx  | TypeScript JSX     |          8 |          0 |          1 |          9 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/molecules/LifeBullets/MonthBullets.tsx      | TypeScript JSX     |         27 |          0 |          1 |         28 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/molecules/LifeBullets/WeekBullets.tsx       | TypeScript JSX     |         27 |          0 |          1 |         28 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/molecules/LifeBullets/YearBullets.tsx       | TypeScript JSX     |         26 |          3 |          2 |         31 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/molecules/TasksContainer/AddTask.tsx        | TypeScript JSX     |          9 |          0 |          2 |         11 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/molecules/TasksContainer/Task.tsx           | TypeScript JSX     |          4 |          0 |          1 |          5 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/molecules/TasksContainer/TaskForm.tsx       | TypeScript JSX     |         34 |          0 |          1 |         35 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/molecules/TasksContainer/Tasks.tsx          | TypeScript JSX     |         43 |         15 |          5 |         63 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/molecules/index.ts                          | TypeScript         |         36 |          3 |          4 |         43 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/organisms/CalendarClock.tsx                 | TypeScript JSX     |         63 |          0 |          2 |         65 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/organisms/LifeBullets.tsx                   | TypeScript JSX     |         27 |          0 |          5 |         32 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/organisms/TasksContainer.tsx                | TypeScript JSX     |         25 |          0 |          2 |         27 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/organisms/index.ts                          | TypeScript         |          4 |          0 |          2 |          6 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/src/vite-env.d.ts                               | TypeScript         |          0 |          1 |          1 |          2 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/tailwind.config.js                              | JavaScript         |          7 |          1 |          1 |          9 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/tsconfig.json                                   | JSON with Comments |         21 |          2 |          3 |         26 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/tsconfig.node.json                              | JSON               |         10 |          0 |          1 |         11 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/client/vite.config.ts                                  | TypeScript         |          5 |          1 |          2 |          8 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/server/db.js                                           | JavaScript         |          8 |          0 |          3 |         11 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/server/package-lock.json                               | JSON               |        773 |          0 |          1 |        774 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/server/package.json                                    | JSON               |         17 |          0 |          1 |         18 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/server/server.js                                       | JavaScript         |         16 |          0 |          6 |         22 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/server/src/tasks/controller.js                         | JavaScript         |         60 |          7 |         11 |         78 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/server/src/tasks/queries.js                            | JavaScript         |         13 |          1 |          2 |         16 |
+| /Users/elias/Desktop/Portfolio projects 2023 [web dev]/habits-app/client/server/src/tasks/routes.js                             | JavaScript         |          9 |          0 |          4 |         13 |
+| Total                                                                                                                           |                    |      6,194 |         65 |        245 |      6,504 |
++---------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
