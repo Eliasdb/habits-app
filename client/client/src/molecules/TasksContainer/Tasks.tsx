@@ -1,26 +1,7 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
 import Task from "./Task";
-import { url } from "../../data/data";
 
-const Tasks = ({ addItem, setListView, listView }) => {
-  const [taskData, setTaskData] = useState([]);
+const Tasks = ({ setListView, listView, taskData, category }) => {
   let renderedItemsIds = [];
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios(url);
-        console.log(response);
-        const taskData = response.data;
-        //   const sortedBy = taskData.sort((a, b) => b.category - a.category);
-        setTaskData(taskData);
-      } catch (error) {
-        console.log(error.response);
-      }
-    };
-    fetchData();
-  }, [addItem]);
 
   return (
     <>

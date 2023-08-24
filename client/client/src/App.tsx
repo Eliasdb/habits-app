@@ -88,6 +88,7 @@ function App() {
         setTask={setTask}
         toggleMiddle={toggleMiddle}
         task={task}
+        category={category}
       />
       {/* <LifeBullets /> */}
     </>

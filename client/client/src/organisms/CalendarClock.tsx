@@ -55,7 +55,7 @@ const CalendarClock = ({
             setToggleMonth={setToggleMonth}
             setCategory={setCategory}
           />
-          <CardinalsCircle />
+          {/* <CardinalsCircle /> */}
         </section>
       </main>
     </>
