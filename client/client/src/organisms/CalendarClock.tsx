@@ -29,6 +29,7 @@ const CalendarClock = ({
   handleSubmit,
   setToggleMiddle,
   setTask,
+  setIcon,
   task,
 }) => {
   return (
@@ -61,6 +62,7 @@ const CalendarClock = ({
             hours={hours}
             setToggleMonth={setToggleMonth}
             setCategory={setCategory}
+            setIcon={setIcon}
           />
           <TaskForm
             toggleInput={toggleInput}

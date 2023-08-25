@@ -18,6 +18,7 @@ function App() {
   const [numberOfYear, setNumberOfYear] = useState<number>(2023);
   const [selectedDate, setSelectedDate] = useState<Date>();
   const [addItem, setAddItem] = useState(false);
+  const [icon, setIcon] = useState();
 
   const [months, setMonths] = useState([]);
   const [days, setDays] = useState([]);
@@ -83,6 +84,7 @@ function App() {
         handleSubmit={handleSubmit}
         setToggleMiddle={setToggleMiddle}
         setTask={setTask}
+        setIcon={setIcon}
         task={task}
       />
       <TasksContainer
@@ -93,6 +95,7 @@ function App() {
         setTask={setTask}
         toggleMiddle={toggleMiddle}
         task={task}
+        icon={icon}
         category={category}
       />
       {/* <LifeBullets /> */}

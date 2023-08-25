@@ -13,6 +13,7 @@ const TasksContainer = ({
   addItem,
   task,
   category,
+  icon,
 }) => {
   const [listView, setListView] = useState(false);
   const [taskData, setTaskData] = useState([]);
@@ -34,7 +35,7 @@ const TasksContainer = ({
   return (
     <>
       {listView ? (
-        <TasksList taskData={taskData} category={category} />
+        <TasksList taskData={taskData} category={category} icon={icon} />
       ) : (
         <Tasks
           setListView={setListView}
