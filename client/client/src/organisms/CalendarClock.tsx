@@ -3,8 +3,10 @@ import {
   AstroCircle,
   CardinalsCircle,
   DaysCircle,
+  Dividers,
   HourCircle,
   MonthsCircle,
+  TaskForm,
 } from "../molecules";
 
 const CalendarClock = ({
@@ -23,6 +25,11 @@ const CalendarClock = ({
   setNumberOfDay,
   setSelectedDate,
   setCategory,
+  toggleMiddle,
+  handleSubmit,
+  setToggleMiddle,
+  setTask,
+  task,
 }) => {
   return (
     <>
@@ -55,6 +62,15 @@ const CalendarClock = ({
             setToggleMonth={setToggleMonth}
             setCategory={setCategory}
           />
+          <TaskForm
+            toggleInput={toggleInput}
+            toggleMiddle={toggleMiddle}
+            handleSubmit={handleSubmit}
+            setToggleMiddle={setToggleMiddle}
+            setTask={setTask}
+            task={task}
+          />
+
           {/* <CardinalsCircle /> */}
         </section>
       </main>

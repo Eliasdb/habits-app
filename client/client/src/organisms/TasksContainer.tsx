@@ -33,14 +33,6 @@ const TasksContainer = ({
   }, [addItem]);
   return (
     <>
-      <TaskForm
-        toggleInput={toggleInput}
-        toggleMiddle={toggleMiddle}
-        handleSubmit={handleSubmit}
-        setToggleMiddle={setToggleMiddle}
-        setTask={setTask}
-        task={task}
-      />
       {listView ? (
         <TasksList taskData={taskData} category={category} />
       ) : (

@@ -79,6 +79,11 @@ function App() {
         setNumberOfDay={setNumberOfDay}
         setSelectedDate={setSelectedDate}
         setCategory={setCategory}
+        toggleMiddle={toggleMiddle}
+        handleSubmit={handleSubmit}
+        setToggleMiddle={setToggleMiddle}
+        setTask={setTask}
+        task={task}
       />
       <TasksContainer
         addItem={addItem}
