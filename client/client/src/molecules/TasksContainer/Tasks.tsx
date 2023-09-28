@@ -1,4 +1,5 @@
-import Task from "./Task";
+import { TaskIcon } from "..";
+import Task from "./TaskIcon";
 
 const Tasks = ({ setListView, listView, taskData, category }) => {
   let renderedItemsIds = [];
@@ -9,16 +10,19 @@ const Tasks = ({ setListView, listView, taskData, category }) => {
         className={`tasks-container ${listView ? "hide-tasks" : ""}`}
         onClick={() => setListView(true)}
       >
-        {taskData.map((task, i) => {
+        {[1, 2, 3, 4, 5].map((task, i) => {
+          // 4 rows ->[ 0 - 1 - 2 - 3]
           if (i < 4)
             return (
               <div key={i} className="task-row">
                 {taskData
+                  // search for only the current id
                   .filter((task) => !renderedItemsIds.includes(task.id))
-                  .map((x, c) => {
+                  .map((taskItem, c) => {
+                    // up until 4 items -> [0 - 1 - 2 - 3 ]
                     if (c <= i) {
-                      renderedItemsIds.push(x.id);
-                      return <Task key={c} />;
+                      renderedItemsIds.push(taskItem.id);
+                      return <TaskIcon key={c} />;
                     }
                   })}
               </div>

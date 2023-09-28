@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 // Fetching
 import axios from "axios";
 import { url } from "./data/data";
+import { IconZodiacAquarius } from "@tabler/icons-react";
 
 function App() {
   // State
@@ -18,7 +19,9 @@ function App() {
   const [numberOfYear, setNumberOfYear] = useState<number>(2023);
   const [selectedDate, setSelectedDate] = useState<Date>();
   const [addItem, setAddItem] = useState(false);
-  const [icon, setIcon] = useState();
+  const [icon, setIcon] = useState(
+    <IconZodiacAquarius id="category-1" className="astro-item-1" size={21} />
+  );
 
   const [months, setMonths] = useState([]);
   const [days, setDays] = useState([]);

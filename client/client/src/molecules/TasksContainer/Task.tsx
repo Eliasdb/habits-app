@@ -1,4 +1,10 @@
-const Task = () => {
-  return <span style={{ color: "white", fontSize: "200px" }}>&#x2B22;</span>;
+import { astroDictionary } from "../../data/data";
+
+const Task = ({ item }) => {
+  return (
+    <div className="tasks-inner">
+      {astroDictionary[item.category]} <li>{item.task}</li>
+    </div>
+  );
 };
 export default Task;

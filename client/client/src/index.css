@@ -224,9 +224,9 @@ body {
   font-family: "Vollkorn", serif;
   border-radius: 50%;
   transition: transform 0.2s ease 0s;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
   color: white;
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -280,8 +280,8 @@ body {
   /* transform: translate(-50%, -67%); */
   border-radius: 50%;
   border: 1px solid white;
-  width: 650px;
-  height: 650px;
+  width: 635px;
+  height: 635px;
   top: 50%;
   left: 50%;
   overflow: hidden;
@@ -293,9 +293,12 @@ body {
   text-align: center;
   border-radius: 50%;
   transition: transform 0.2s ease 0s;
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   line-height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .astro-item-4 {
@@ -798,7 +801,8 @@ svg {
 
 .task-list-container {
   height: 30rem;
-  /* border: 1px solid white; */
+  border: 1px solid white;
+  border-radius: 4%;
   overflow: hidden;
   margin: 0;
   margin-bottom: 40rem;
@@ -826,7 +830,7 @@ svg {
 }
 
 ul.tasks-scroll {
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 6rem;
   /* display: flex; */
 }
@@ -835,7 +839,7 @@ ul.tasks-scroll {
   display: flex;
   align-items: center;
   width: 26rem;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 1rem;
 }
 
@@ -848,7 +852,7 @@ ul.tasks-scroll {
 }
 
 ul > *:last-child {
-  padding-bottom: 7rem;
+  padding-bottom: 11rem;
 }
 
 footer {
@@ -871,7 +875,7 @@ footer {
   width: 30rem;
   margin: 0 auto;
   height: 7rem;
-  bottom: -30rem;
+  bottom: -29.9rem;
   border: none;
 }
 
@@ -885,4 +889,53 @@ footer::before {
   height: 1px;
   background: black;
   opacity: 0.2;
+}
+
+.wrap {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.quart {
+  position: absolute;
+  height: 50%;
+  width: 50%;
+  background: tomato;
+  transition: all 0.4s;
+}
+.quart:first-child {
+  top: 0;
+  left: 0;
+}
+.quart:nth-child(2) {
+  top: 0;
+  left: 50%;
+}
+.quart:nth-child(3) {
+  top: 50%;
+  left: 0;
+}
+.quart:nth-child(4) {
+  top: 50%;
+  left: 50%;
+}
+.center {
+  height: 80%;
+  width: 80%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  background: lightgray;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 160px;
+}
+.quart:hover {
+  background: dimgray;
+}
+
+button {
+  display: flex;
 }
